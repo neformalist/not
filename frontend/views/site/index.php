@@ -110,6 +110,9 @@ $this->title = 'My Yii Application';
         </div>
     </aside>
 
+    
+   
+  
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
         <div class="container">
@@ -118,32 +121,32 @@ $this->title = 'My Yii Application';
                     <h2>Our Work</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
+                        <div class="col-md-6 animation-element bounce-up">
+                            <div class="portfolio-item subject">
                                 <a href="#">
                                     <?=Html::img('@web/img/portfolio-1.jpg', ['class'=> 'img-portfolio img-responsive'])?>
                                     
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
+                        <div class="col-md-6 animation-element bounce-up">
+                            <div class="portfolio-item subject">
                                 <a href="#">
                                     <?=Html::img('@web/img/portfolio-2.jpg', ['class'=> 'img-portfolio img-responsive'])?>
                                     
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
+                        <div class="col-md-6 animation-element  bounce-up">
+                            <div class="portfolio-item subject">
                                 <a href="#">
                                     <?=Html::img('@web/img/portfolio-3.jpg', ['class'=> 'img-portfolio img-responsive'])?>
                                     
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
+                        <div class="col-md-6 animation-element bounce-up">
+                            <div class="portfolio-item subject">
                                 <a href="#">
                                     <?=Html::img('@web/img/portfolio-4.jpg', ['class'=> 'img-portfolio img-responsive'])?>
                                     
