@@ -6,17 +6,24 @@ $this->title = 'My Yii Application';
 ?>
 
 
-    
 
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Start Bootstrap</h1>
-            <h3>Free Bootstrap Themes &amp; Templates</h3>
+<!--Video Section-->
+<section class="content-section video-section">
+  <div class="pattern-overlay">
+  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=eyEcRZ3ZzgA',containment:'.video-section', quality:'large',startAt:15, ratio:'4/3', autoPlay:true, mute:true, opacity:1}">bg</a>
+    <div id="top" class="text-vertical-center">
+      
+        
+            <h1>Notes On Music</h1>
+            <h3>Classical Music Publishing &amp; Engraving</h3>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
-        </div>
-    </header>
+	
+    </div>
+  </div>
+</section>
+<!--Video Section Ends Here-->
+
 
     <!-- About -->
     <section id="about" class="about">

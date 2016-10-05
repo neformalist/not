@@ -19,8 +19,10 @@ class IndexAsset extends AssetBundle
         '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic'
     ];
     public $js = [
+        'index/js/jquery.mb.YTPlayer.min.js',
         'index/js/index.js',
         'index/js/scroll.js',
+        
     ];
     public $depends = [
         'yii\web\YiiAsset',
