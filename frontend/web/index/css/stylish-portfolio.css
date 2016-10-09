@@ -22,31 +22,88 @@ body {
     vertical-align: middle;
     line-height: 5;
     
+
 }
 
 .text-vertical-center h1 {
-    margin: 0;
+    //margin: 5%;
     padding: 0;
     font-size: 10vw;
     font-weight: 700;
-    color:#eee;
-    line-height: 1.5;
+    color:#E06540;
+    text-shadow: 0px 3px 0px #b2a98f,
+             0px 14px 10px rgba(0,0,0,0.15),
+             0px 24px 2px rgba(0,0,0,0.1),
+             0px 34px 30px rgba(0,0,0,0.1);
+    
 }
 .text-vertical-center h3 {
     margin: 0;
     padding: 0;
     font-size: 5vw;
     font-weight: 700;
-    color:#eee;
-    line-height: 1.5;
+    color:#E06540;
+        text-shadow: 0px 3px 0px #b2a98f,
+             0px 14px 10px rgba(0,0,0,0.15),
+             0px 24px 2px rgba(0,0,0,0.1),
+             0px 34px 30px rgba(0,0,0,0.1);
+    
+}
+
+.header-buttom{
+    padding: 2%;
+    color:#222;
+    border: 0.5rem solid #E06540;
+    font-size: 2.5vw;
+    border-radius: 10%;
+    color:#E06540;
+}
+.header-buttom:hover{
+   text-decoration: none;
+   color:#fff;
+   background-color: #E06540;
+}
+@media(max-width:768px) {
+    .header-buttom {
+        font-size: 7vw;
+    }
 }
 
 /* Custom Button Styles */
+
+
+.btn-orange{
+   border-radius: 10%;
+    color: #fff;
+    background-color: rgba(224,101,64,0.7); 
+}
+
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active {
+    color: #fff;
+    background-color: rgba(224,101,64,1);
+}
+
+.btn-orange-close{
+   border-radius: 50%;
+   color: #fff;
+   background-color: #222; 
+}
+
+.btn-orange-close:hover,
+.btn-orange-close:focus,
+.btn-orange-close:active {
+    color: #fff;
+    background-color: #E06540;
+}
 
 .btn-dark {
     border-radius: 0;
     color: #fff;
     background-color: rgba(0,0,0,0.4);
+    padding: 1.5%;
+    font-size: 2rem;
 }
 
 .btn-dark:hover,
@@ -100,6 +157,7 @@ hr.small {
     margin: 0;
     padding: 0;
     list-style: none;
+    font-size: 1.75rem;
 }
 
 
@@ -121,8 +179,8 @@ hr.small {
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
+    color: #E06540;
+    border-right:5px solid #E06540;
 }
 
 .sidebar-nav li a:active,
@@ -141,8 +199,9 @@ hr.small {
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
+    color: #E06540;
     background: none;
+    border:none;
 }
 
 #menu-toggle {
@@ -168,7 +227,12 @@ hr.small {
 
 
 .video-section .pattern-overlay {
-background-color: rgba(37,50,80,.7);
+background-color: rgba(205,206,7,.5); /*157,187,121; 187,253,119; 187,227,202*/
+    background: -moz-radial-gradient(center, ellipse cover, rgba(157,187,121,.2) 0%, rgba(157,187,121,.5));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(157,187,121,.2) 0%,rgba(157,187,121,.5) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(157,187,121,.2) 0%,rgba(157,187,121,.5) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(157,187,121,.2) 0%,rgba(157,187,121,.5) 100%);
+    background: radial-gradient(center, ellipse cover, rgba(157,187,121,.2) 0%,rgba(157,187,121,.5) 100%);
 min-height: 100vh;
 display: table;
 position: relative;

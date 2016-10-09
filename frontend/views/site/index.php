@@ -10,14 +10,14 @@ $this->title = 'My Yii Application';
 <!--Video Section-->
 <section class="content-section video-section">
   <div class="pattern-overlay">
-  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=eyEcRZ3ZzgA',containment:'.video-section', quality:'large',startAt:15, ratio:'4/3', autoPlay:true, mute:true, opacity:1}">bg</a>
+  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=BfdDdtQ2pJo',  containment:'.video-section', quality:'hd720', ratio:'16/9', autoPlay:true, mute:true, opacity:1}">bg</a>
     <div id="top" class="text-vertical-center">
       
         
             <h1>Notes On Music</h1>
             <h3>Classical Music Publishing &amp; Engraving</h3>
             <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <a href="#about" class="header-buttom">Find Out More</a>
 	
     </div>
   </div>
