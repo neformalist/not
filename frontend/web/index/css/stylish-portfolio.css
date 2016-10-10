@@ -26,7 +26,7 @@ body {
 }
 
 .text-vertical-center h1 {
-    //margin: 5%;
+    /*margin: 5%;*/
     padding: 0;
     font-size: 10vw;
     font-weight: 700;
@@ -227,12 +227,12 @@ hr.small {
 
 
 .video-section .pattern-overlay {
-background-color: rgba(205,206,7,.5); /*157,187,121; 187,253,119; 187,227,202*/
-    background: -moz-radial-gradient(center, ellipse cover, rgba(157,187,121,.2) 0%, rgba(157,187,121,.5));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(157,187,121,.2) 0%,rgba(157,187,121,.5) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(157,187,121,.2) 0%,rgba(157,187,121,.5) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(157,187,121,.2) 0%,rgba(157,187,121,.5) 100%);
-    background: radial-gradient(center, ellipse cover, rgba(157,187,121,.2) 0%,rgba(157,187,121,.5) 100%);
+background-color: rgba(232,249,109,.5); /*157,187,121; 187,253,119; 187,227,202*/
+    background: -moz-radial-gradient(center, ellipse cover, rgba(242,249,97,.2) 0%, rgba(242,249,97,.4));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(242,249,97,.2) 0%,rgba(242,249,97,.4) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(242,249,97,.2) 0%,rgba(242,249,97,.4) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(242,249,97,.2) 0%,rgba(242,249,97,.4) 100%);
+    background: radial-gradient(center, ellipse cover, rgba(242,249,97,.2) 0%,rgba(242,249,97,.4) 100%);
 min-height: 100vh;
 display: table;
 position: relative;
