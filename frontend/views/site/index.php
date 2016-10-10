@@ -52,7 +52,7 @@ $this->title = 'My Yii Application';
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                                <i class="fa fa-cloud fa-stack-1x icon-orange"></i>
                             </span>
                                 <h4>
                                     <strong>Service Name</strong>
@@ -65,7 +65,7 @@ $this->title = 'My Yii Application';
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                                <i class="fa fa-compass fa-stack-1x icon-orange"></i>
                             </span>
                                 <h4>
                                     <strong>Service Name</strong>
@@ -78,7 +78,7 @@ $this->title = 'My Yii Application';
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                                <i class="fa fa-flask fa-stack-1x icon-orange"></i>
                             </span>
                                 <h4>
                                     <strong>Service Name</strong>
@@ -91,7 +91,7 @@ $this->title = 'My Yii Application';
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
+                                <i class="fa fa-shield fa-stack-1x icon-orange"></i>
                             </span>
                                 <h4>
                                     <strong>Service Name</strong>
@@ -113,7 +113,7 @@ $this->title = 'My Yii Application';
     <!-- Callout -->
     <aside class="callout">
         <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
+            <h2>Vertically Centered Text</h2>
         </div>
     </aside>
 
