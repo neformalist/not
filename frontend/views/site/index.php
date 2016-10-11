@@ -130,34 +130,47 @@ $this->title = 'My Yii Application';
                     <div class="row">
                         <div class="col-md-6 animation-element bounce-up">
                             <div class="portfolio-item subject">
-                                <a href="#">
+                                    <div class="caption">
+                                        <h4>Thumbnail Headline</h4>
+                                        <p>short thumbnail description</p>
+                                        <p>
+                                        <a href="" class="label label-danger">Далее</a></p>
+                                    </div>
                                     <?=Html::img('@web/img/portfolio-1.jpg', ['class'=> 'img-portfolio img-responsive'])?>
-                                    
-                                </a>
+                                
                             </div>
                         </div>
                         <div class="col-md-6 animation-element bounce-up">
                             <div class="portfolio-item subject">
-                                <a href="#">
-                                    <?=Html::img('@web/img/portfolio-2.jpg', ['class'=> 'img-portfolio img-responsive'])?>
-                                    
-                                </a>
+                                    <div class="caption">
+                                        <h4>Thumbnail Headline</h4>
+                                        <p>short thumbnail description</p>
+                                        <p>
+                                        <a href="" class="label label-danger">Далее</a></p>
+                                    </div>
+                                    <?=Html::img('@web/img/portfolio-2.jpg', ['class'=> 'img-portfolio img-responsive'])?>                                  
                             </div>
                         </div>
                         <div class="col-md-6 animation-element  bounce-up">
                             <div class="portfolio-item subject">
-                                <a href="#">
+                                    <div class="caption">
+                                        <h4>Thumbnail Headline</h4>
+                                        <p>short thumbnail description</p>
+                                        <p>
+                                        <a href="" class="label label-danger">Далее</a></p>
+                                    </div>
                                     <?=Html::img('@web/img/portfolio-3.jpg', ['class'=> 'img-portfolio img-responsive'])?>
-                                    
-                                </a>
                             </div>
                         </div>
                         <div class="col-md-6 animation-element bounce-up">
                             <div class="portfolio-item subject">
-                                <a href="#">
+                                    <div class="caption">
+                                        <h4>Thumbnail Headline</h4>
+                                        <p>short thumbnail description</p>
+                                        <p>
+                                        <a href="" class="label label-danger">Далее</a></p>
+                                    </div>
                                     <?=Html::img('@web/img/portfolio-4.jpg', ['class'=> 'img-portfolio img-responsive'])?>
-                                    
-                                </a>
                             </div>
                         </div>
                     </div>
