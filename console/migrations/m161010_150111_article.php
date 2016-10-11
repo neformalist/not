@@ -16,7 +16,8 @@ class m161010_150111_article extends Migration
             'description' => $this->text(500),
             'author' => $this->string(),
             'hits'=> $this->integer(),
-            'url' => $this->string()->notNull()
+            'url' => $this->string()->notNull(),
+            'image'=> $this->string()
         ]);
         
         $this->createIndex('idx-article-title', '{{article}}', 'title');
