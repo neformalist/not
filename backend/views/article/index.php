@@ -25,15 +25,21 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'category_id',
+            [
+                'attribute' => 'category_id',
+                'filter' => common\models\Category::find()->select(['name', 'id'])->indexBy('id')->column(),
+                'value' => function (common\models\Article $article){
+                                return $article->category->name;
+                            }
+            ],
             'title',
             'updated_at',
             'created_at',
-            // 'visible',
-            // 'description:ntext',
-            // 'author',
-            // 'hits',
-            // 'url:url',
+             'visible',
+             'description:ntext',
+             'author',
+             'hits',
+             'url:url',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

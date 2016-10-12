@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Article */
@@ -29,7 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'category_id',
+            [
+                'attribute' => 'category_id',
+                'value' => \yii\helpers\ArrayHelper::getValue($model, 'category.name')        
+            ],
             'title',
             'updated_at',
             'created_at',
@@ -40,5 +44,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'url:url',
         ],
     ]) ?>
+    
+   
+    
+    <?= GridView::widget([
+        'dataProvider' => new \yii\data\ActiveDataProvider(['query' => $model->getTexts()]),
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'text_ru',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+    
+    
 
 </div>

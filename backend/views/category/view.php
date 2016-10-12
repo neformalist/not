@@ -30,8 +30,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
-            'parent',
+            [
+                'attribute' => 'parent',
+                'value' => \yii\helpers\ArrayHelper::getValue($model, 'parent.name')
+            ],
         ],
     ]) ?>
+    
+    
 
 </div>

@@ -26,7 +26,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-            'parent',
+            [
+                'attribute' => 'parent',
+                'filter' => common\models\Category::find()->select(['name', 'id'])->indexBy('id')->column(),
+                'value' => function (common\models\Category $category){
+                                return $category->parent0->name;
+                            }          
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
