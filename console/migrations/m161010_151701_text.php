@@ -11,6 +11,7 @@ class m161010_151701_text extends Migration
             'article_id'=>$this->integer(),
             'text_ru'=>$this->text(),
             'text_en'=>$this->text(),
+            'number_page' => $this->smallInteger(),
         ]);
         
         $this->addForeignKey('fk-text-article', '{{text}}', 'article_id', '{{article}}', 'id','CASCADE', 'RESTRICT');

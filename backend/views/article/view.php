@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'updated_at',
             'created_at',
-            'visible',
+            'visible:boolean',
             'description:ntext',
             'author',
             'hits',
@@ -45,17 +45,46 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
     
-   
-    
+   <?=  Html::a('Add', ['text/create', 'article_id'=> $model->id], ['class' => 'btn btn-primary']);?>
+   <?php ?>
     <?= GridView::widget([
         'dataProvider' => new \yii\data\ActiveDataProvider(['query' => $model->getTexts()]),
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'text_ru',
+            ['attribute' =>'text_ru',
+              'value' => function ($data){
+                  return \yii\helpers\BaseStringHelper::truncate($data->text_ru, 150) ;
+              }
+            ],
+            'number_page',        
+            ['class' => 'yii\grid\ActionColumn',
+             'controller' => 'text',
+                'buttons'=>[
+                    'update'=>function($url, $model, $key) use ($article_id){
+                              return  Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url.'&article_id='.$article_id);
+                            },
+                                       
+                ]
+            ],
+            
+        ],
+    ]); ?>
+    <?=  Html::a('Add', ['meta/create', 'article_id'=> $model->id], ['class' => 'btn btn-primary']);?>
+     <?= GridView::widget([
+        'dataProvider' => new \yii\data\ActiveDataProvider(['query' => $model->getMetas()]),
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
 
-            ['class' => 'yii\grid\ActionColumn'],
+            'description_ru',
+            'keywords_ru',
+
+            ['class' => 'yii\grid\ActionColumn',
+             'controller' => 'meta' 
+            ],
+            
         ],
     ]); ?>
     

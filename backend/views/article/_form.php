@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'created_at')->textInput() ?>
 
-    <?= $form->field($model, 'visible')->textInput() ?>
+    <?= $form->field($model, 'visible')->checkbox() ?>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 

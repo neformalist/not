@@ -33,7 +33,7 @@ class Meta extends \yii\db\ActiveRecord
     {
         return [
             [['article_id'], 'integer'],
-            [['desription_ru', 'keywords_ru', 'desription_en', 'keywords_en'], 'string'],
+            [['description_ru', 'keywords_ru', 'description_en', 'keywords_en'], 'string'],
             [['article_id'], 'exist', 'skipOnError' => true, 'targetClass' => Article::className(), 'targetAttribute' => ['article_id' => 'id']],
         ];
     }
@@ -46,9 +46,9 @@ class Meta extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'article_id' => 'Article ID',
-            'desription_ru' => 'Desription Ru',
+            'description_ru' => 'Desription Ru',
             'keywords_ru' => 'Keywords Ru',
-            'desription_en' => 'Desription En',
+            'description_en' => 'Desription En',
             'keywords_en' => 'Keywords En',
         ];
     }

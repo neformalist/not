@@ -35,7 +35,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'updated_at',
             'created_at',
-             'visible',
+             [
+                 'attribute' => 'visible',
+                 'filter' => [0 => "No", 1 => 'Yes'],
+                 'format' => 'boolean'
+             ],
              'description:ntext',
              'author',
              'hits',

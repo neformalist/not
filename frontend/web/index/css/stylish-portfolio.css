@@ -5,7 +5,9 @@
  */
 
 /* Global Styles */
-
+*::selection{
+    background-color: #D0FF00;
+}
 html,
 body {
     width: 100%;
@@ -20,7 +22,7 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    line-height: 5;
+   
 }
 
 .text-vertical-center h1 {
@@ -53,18 +55,23 @@ body {
     
 }
 
+.text-vertical-center a{
+    
+}
+
 .header-buttom{
-    padding: 2%;
+    padding: 2% 2% 0 2%;
     color:#222;
-    border: 0.5rem solid #E06540;
-    font-size: 2.5vw;
-    border-radius: 10%;
+    display:inline-block;
+    font-size: 3vw;
+    font-weight: 700;
     color:#E06540;
+    
 }
 .header-buttom:hover{
-   text-decoration: none;
-   color:#fff;
-   background-color: #E06540;
+   
+   color:#E06540;
+   
 }
 @media(max-width:768px) {
     .header-buttom {
@@ -230,16 +237,17 @@ hr.small {
 
 
 .video-section .pattern-overlay {
-background-color: rgba(232,249,109,.5); /*157,187,121; 187,253,119; 187,227,202*/
-    background: -moz-radial-gradient(center, ellipse cover, rgba(242,249,97,.2) 0%, rgba(242,249,97,.4));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(242,249,97,.2) 0%,rgba(242,249,97,.4) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(242,249,97,.2) 0%,rgba(242,249,97,.4) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(242,249,97,.2) 0%,rgba(242,249,97,.4) 100%);
-    background: radial-gradient(center, ellipse cover, rgba(242,249,97,.2) 0%,rgba(242,249,97,.4) 100%);
+    background-color: rgba(130,215,142,.3);
+background: -moz-linear-gradient(45deg, rgba(248,251,206,0.15) 0%, rgba(243,247,126,0.4) 100%); 
+background: -webkit-linear-gradient(45deg, rgba(248,251,206,0.15) 0%,rgba(243,247,126,0.4) 100%); 
+background: linear-gradient(45deg, rgba(248,251,206,0.15) 0%,rgba(243,247,126,0.4) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26f8fbce', endColorstr='#66f3f77e',GradientType=1 );
+
 min-height: 100vh;
 display: table;
 position: relative;
 width: 100%;
+
 }
 /* Incase of overlay problems just increase the min-height*/
 
@@ -247,7 +255,7 @@ width: 100%;
 .player {font-size: 1px;}
 
 .video-section{
-   background: url(/img/bg.jpg) no-repeat center center scroll;
+   background: url(/img/score-bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -356,6 +364,47 @@ width: 100%;
 .call-to-action .btn {
     margin: 10px;
 }
+
+#lightSlider{
+    color :#E06540;
+}
+
+.slideControls{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left:0;
+    z-index: 100
+}
+.slideControls  i{
+    font-size:5rem;
+    color :#E06540;
+    
+    
+  }
+.slideControls  .slideNext{
+    right:-5%;
+    position:absolute;
+    cursor:pointer;
+  }
+.slideControls  .slidePrev{
+    left:-5%;
+    position:absolute;
+    cursor:pointer;
+  }
+  
+@media(max-width:768px) {
+    .slideControls  .slideNext{
+    right:0;
+    position:absolute;
+    cursor:pointer;
+  }
+    .slideControls  .slidePrev{
+    left:0;
+    position:absolute;
+    cursor:pointer;
+  }
+}  
 
 /* Map */
 

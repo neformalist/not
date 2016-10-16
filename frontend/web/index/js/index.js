@@ -73,3 +73,26 @@
 
     $(".player").mb_YTPlayer();
 
+    var slider =  $('#lightSlider').lightSlider({
+            items: 5,
+            autoWidth:true,
+            loop:true,
+            pager: false,
+            slideMargin: 55,
+            controls: false,
+            auto: true,
+            pauseOnHover: true,
+            speed: 1000,
+            pause: 4000,
+            onSliderLoad: function() {
+                $('#lightSlider').removeClass('cS-hidden');
+            } 
+        });
+        
+     $('.slideControls .slidePrev').click(function() {
+            slider.goToPrevSlide();
+        });
+
+        $('.slideControls .slideNext').click(function() {
+            slider.goToNextSlide();
+        });    

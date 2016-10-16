@@ -30,7 +30,7 @@ class Text extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['article_id'], 'integer'],
+            [['article_id', 'number_page'], 'integer'],
             [['text_ru', 'text_en'], 'string'],
             [['article_id'], 'exist', 'skipOnError' => true, 'targetClass' => Article::className(), 'targetAttribute' => ['article_id' => 'id']],
         ];
@@ -46,6 +46,7 @@ class Text extends \yii\db\ActiveRecord
             'article_id' => 'Article ID',
             'text_ru' => 'Text Ru',
             'text_en' => 'Text En',
+            'number_page' => 'number_page',
         ];
     }
 

@@ -16,13 +16,14 @@ class IndexAsset extends AssetBundle
         'index/css/stylish-portfolio.css',
         'index/css/font-awesome/css/font-awesome.min.css',
         'index/css/scroll.css',
+        'index/css/lightslider.min.css',
         '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic'
     ];
     public $js = [
         'index/js/jquery.mb.YTPlayer.min.js',
+        'index/js/lightslider.min.js',
         'index/js/index.js',
         'index/js/scroll.js',
-        
     ];
     public $depends = [
         'yii\web\YiiAsset',

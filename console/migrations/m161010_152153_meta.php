@@ -9,9 +9,9 @@ class m161010_152153_meta extends Migration
         $this->createTable('{{meta}}', [
             'id'=>$this->primaryKey(),
             'article_id'=>$this->integer(),
-            'desription_ru'=>$this->text(),
+            'description_ru'=>$this->text(),
             'keywords_ru'=>$this->text(),
-            'desription_en'=>$this->text(),
+            'description_en'=>$this->text(),
             'keywords_en'=>$this->text()
         ]);
         

@@ -16,8 +16,8 @@ $this->title = 'My Yii Application';
         
             <h1>Notes On Music</h1>
             <h3>Classical Music Publishing &amp; Engraving</h3>
-            <br>
-            <a href="#about" class="header-buttom">Find Out More</a>
+            <br><br><br><br><br><br>
+            <a href="#about" class="header-buttom">Find Out More <i class="fa fa-angle-down"></i></a>
 	
     </div>
   </div>
@@ -196,6 +196,67 @@ $this->title = 'My Yii Application';
             </div>
         </div>
     </aside>
+    
+     <!-- Technology -->
+    <section id="technology" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Our Technology</h2>
+                    <hr class="small">
+                     <div class="slideControls">
+                            <a class="slidePrev">
+                              <i class="fa fa-angle-left"></i>
+                             </a>
+                            <a class="slideNext">
+                              <i class="fa fa-angle-right"></i>
+                            </a>
+                      </div> 
+                    <ul id="lightSlider" class="cs-hidden">
+                         <li>
+                             <?=Html::img('@web/img/icons/finale-icons.png', ['height' => '150'])?>
+                             <h3>Finale 2014</h3>
+                             
+                         </li>
+                         <li>
+                            <?=Html::img('@web/img/icons/sibicon.png', ['height' => '150'])?>
+                             <h3>Sibelius 8</h3>
+                             
+                         </li>
+                         <li>
+                             <?=Html::img('@web/img/icons/musescore-icon-round-2048.png', ['height' => '150'])?>
+                             <h3>MuseScore 2</h3>
+                             
+                         </li>
+                         <li>
+                            <?=Html::img('@web/img/icons/photoshop.png', ['height' => '150'])?>
+                             <h3>Adobe PhotoShop</h3>
+                             
+                         </li>
+                         <li>
+                             <?=Html::img('@web/img/icons/Adobe_InDesign_icon.png', ['height' => '150'])?>
+                             <h3>Adobe InDesign</h3>
+                             
+                         </li>
+                         <li>
+                             <?=Html::img('@web/img/icons/illustrator.png', ['height' => '150'])?>
+                             <h3>Adobe Illustrator</h3>
+                             
+                         </li>
+                         <li>
+                             <?=Html::img('@web/img/icons/pdf-icon.png', ['height' => '150'])?>
+                             <h3>Adobe PDF</h3>
+                            
+                         </li>
+
+                       </ul>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
 
     <!-- Map -->
     <section id="contact" class="map">
