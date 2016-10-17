@@ -85,7 +85,7 @@ class MetaController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['article/view', 'id' => $model->article_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -99,11 +99,11 @@ class MetaController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($id, $article_id)
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect(['article/view', 'id' => $article_id]);
     }
 
     /**

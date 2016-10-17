@@ -18,7 +18,7 @@ class TextSearch extends Text
     public function rules()
     {
         return [
-            [['id', 'article_id'], 'integer'],
+            [['article_id', 'number_page'], 'integer'],
             [['text_ru', 'text_en'], 'safe'],
         ];
     }
@@ -47,6 +47,7 @@ class TextSearch extends Text
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            
         ]);
 
         $this->load($params);

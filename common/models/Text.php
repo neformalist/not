@@ -31,6 +31,7 @@ class Text extends \yii\db\ActiveRecord
     {
         return [
             [['article_id', 'number_page'], 'integer'],
+            ['number_page', 'unique', 'message' => 'Номер страницы уже существует'],
             [['text_ru', 'text_en'], 'string'],
             [['article_id'], 'exist', 'skipOnError' => true, 'targetClass' => Article::className(), 'targetAttribute' => ['article_id' => 'id']],
         ];

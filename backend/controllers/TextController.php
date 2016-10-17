@@ -101,11 +101,11 @@ class TextController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($id, $article_id)
     {
         $this->findModel($id)->delete();
         
-        return $this->redirect(['article/view', 'id' => $id]);
+        return $this->redirect(['article/view', 'id' => $article_id]);
     }
 
     /**
