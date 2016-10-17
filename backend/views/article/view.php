@@ -6,6 +6,9 @@ use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Article */
+/* @var $options_delete array */
+/* @var $searchModelText backend\controllers\TextSearch */
+/* @var $dataProviderText yii\data\ActiveDataProvider */
 
 $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Articles', 'url' => ['index']];
@@ -46,24 +49,20 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
     
    <?=  Html::a('Add', ['text/create', 'article_id'=> $model->id], ['class' => 'btn btn-primary']);?>
-   <?php $options_delete = [
-                    'title' => Yii::t('yii', 'Delete'),
-                    'aria-label' => Yii::t('yii', 'Delete'),
-                    'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
-                    'data-method' => 'post',
-                    'data-pjax' => '0',] ?>
+  
     <?= GridView::widget([
-        'dataProvider' => new \yii\data\ActiveDataProvider(['query' => $model->getTexts(), 'pagination' => ['pageSize' => 10,]]),
-        'filterModel' => new backend\controllers\TextSearch,
+        'dataProvider' => $dataProviderText,
+        'filterModel' => $searchModelText,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
             ['attribute' =>'text_ru',
               'value' => function ($data){
-                  return \yii\helpers\BaseStringHelper::truncate($data->text_ru, 130) ;
+                  return \yii\helpers\BaseStringHelper::truncate($data->text_ru, 130);
               }
             ],
-            'number_page',        
+            'number_page',
+            'visible:boolean',        
             ['class' => 'yii\grid\ActionColumn',
              'controller' => 'text',
                 'buttons'=>[

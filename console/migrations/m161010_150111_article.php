@@ -10,7 +10,7 @@ class m161010_150111_article extends Migration
             'id'=>$this->primaryKey(),
             'category_id'=>$this->integer(),
             'title'=>$this->string(),
-            'updated_at' => $this->timestamp()->defaultValue(null),
+            'updated_at' => $this->timestamp(),
             'created_at' => $this->timestamp(),
             'visible' => $this->smallInteger(1)->defaultValue(0),
             'description' => $this->text(500),

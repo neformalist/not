@@ -19,7 +19,7 @@ class TextSearch extends Text
     {
         return [
             [['article_id', 'number_page'], 'integer'],
-            [['text_ru', 'text_en'], 'safe'],
+            [['text_ru', 'text_en', 'number_page'], 'safe'],
         ];
     }
 
@@ -41,7 +41,8 @@ class TextSearch extends Text
      */
     public function search($params)
     {
-        $query = Text::find();
+        
+        $query = Text::find()->where(['article_id' => $params['id']]);
 
         // add conditions that should always apply here
 
@@ -49,7 +50,7 @@ class TextSearch extends Text
             'query' => $query,
             
         ]);
-
+        
         $this->load($params);
 
         if (!$this->validate()) {
@@ -63,9 +64,12 @@ class TextSearch extends Text
             'id' => $this->id,
             'article_id' => $this->article_id,
         ]);
+        
+        
 
         $query->andFilterWhere(['like', 'text_ru', $this->text_ru])
-            ->andFilterWhere(['like', 'text_en', $this->text_en]);
+            ->andFilterWhere(['like', 'text_en', $this->text_en])
+            ->andFilterWhere(['like', 'number_page', $this->number_page]);
 
         return $dataProvider;
     }

@@ -8,6 +8,10 @@ use backend\controllers\ArticleSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\controllers\TextSearch;
+use yii\behaviors\TimestampBehavior;
+use yii\db\Expression;
+use yii\db\ActiveRecord;
 
 /**
  * ArticleController implements the CRUD actions for Article model.
@@ -25,6 +29,15 @@ class ArticleController extends Controller
                 'actions' => [
                     'delete' => ['POST'],
                 ],
+                
+            ],
+            'timestamp' =>[
+            'class' => TimestampBehavior::className(),
+            'attributes' => [
+                ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
+                ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'], 
+                ],    
+            'value' => new Expression('NOW()'),
             ],
         ];
     }
@@ -37,7 +50,7 @@ class ArticleController extends Controller
     {
         $searchModel = new ArticleSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -51,9 +64,22 @@ class ArticleController extends Controller
      */
     public function actionView($id)
     {
+        $searchModelText = new TextSearch();
+        $dataProviderText = $searchModelText->search(Yii::$app->request->queryParams);
+        
+        $options_delete = [
+                    'title' => Yii::t('yii', 'Delete'),
+                    'aria-label' => Yii::t('yii', 'Delete'),
+                    'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
+                    'data-method' => 'post',
+                    'data-pjax' => '0',];
+        
         return $this->render('view', [
             'model' => $this->findModel($id),
             'article_id' => $id,
+            'searchModelText' => $searchModelText,
+            'dataProviderText' => $dataProviderText,
+            'options_delete' => $options_delete,
         ]);
     }
 
