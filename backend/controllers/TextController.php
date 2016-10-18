@@ -65,7 +65,9 @@ class TextController extends Controller
     {
         $model = new Text();
         $model->article_id = $article_id;
+        
         $page  = Text::find()->where(['article_id' => $article_id])->orderBy(['number_page' => SORT_DESC])->one();
+        
         $model->number_page = $page->number_page + 1;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['article/view', 'id' => $model->article_id]);

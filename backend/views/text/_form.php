@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dosamigos\ckeditor\CKEditor;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Text */
@@ -11,10 +12,10 @@ use yii\widgets\ActiveForm;
 <div class="text-form">
 
     <?php $form = ActiveForm::begin(); ?>
+    <?=  Html::tag('h2', $model->article->title);?>
+    
 
-    <?= $form->field($model, 'article_id')->textInput() ?>
-
-    <?= $form->field($model, 'text_ru')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'text_ru')->widget(CKEditor::className())  ?>
 
     <?= $form->field($model, 'text_en')->textarea(['rows' => 6]) ?>
     
