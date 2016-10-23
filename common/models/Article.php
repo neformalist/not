@@ -42,6 +42,7 @@ class Article extends \yii\db\ActiveRecord
             [['updated_at', 'created_at'], 'safe'],
             [['description'], 'string'],
             [['url'], 'required'],
+            [['image'], 'string'],
             [['title', 'author', 'url'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
         ];
@@ -63,6 +64,7 @@ class Article extends \yii\db\ActiveRecord
             'author' => 'Author',
             'hits' => 'Hits',
             'url' => 'Url',
+            'image' => 'IMAGE',
         ];
     }
 

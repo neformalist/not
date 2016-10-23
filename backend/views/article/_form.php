@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use iutbay\yii2kcfinder\KCFinderInputWidget;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Article */
@@ -9,7 +10,7 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="article-form">
-
+    
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'category_id')->dropDownList(common\models\Category::find()->select(['name', 'id'])->indexBy('id')->column(), ['promt'=>'']) ?>
@@ -29,6 +30,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'hits')->textInput() ?>
 
     <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
+    
+    <?= $form->field($model, 'image')->widget(KCFinderInputWidget::className()) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

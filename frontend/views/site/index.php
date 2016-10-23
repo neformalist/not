@@ -1,7 +1,9 @@
 <?php
 
 /* @var $this yii\web\View */
+/* @var $posts */
 use yii\helpers\Html;
+use yii\helpers\Url;
 $this->title = 'My Yii Application';
 ?>
 
@@ -10,16 +12,14 @@ $this->title = 'My Yii Application';
 <!--Video Section-->
 <section class="content-section video-section">
   <div class="pattern-overlay">
-  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=BfdDdtQ2pJo',  containment:'.video-section', quality:'hd720', ratio:'16/9', autoPlay:true, mute:true, opacity:1}">bg</a>
+  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=7_96AtGSxg8',  containment:'.video-section', quality:'hd720', ratio:'16/9', autoPlay:true, mute:true, opacity:1}">bg</a>
     <div id="top" class="text-vertical-center">
-      
-        
             <h1>Notes On Music</h1>
+            <br>
             <h3>Classical Music Publishing &amp; Engraving</h3>
-            <br><br><br><br><br><br>
-            <a href="#about" class="header-buttom">Find Out More <i class="fa fa-angle-down"></i></a>
-	
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
+   <a href="#about" class="header-buttom"><i class="fa fa-angle-down"></i></a>
   </div>
 </section>
 <!--Video Section Ends Here-->
@@ -128,51 +128,19 @@ $this->title = 'My Yii Application';
                     <h2>Our Work</h2>
                     <hr class="small">
                     <div class="row">
+                        <?php foreach ($posts as $post):?>
                         <div class="col-md-6 animation-element bounce-up">
                             <div class="portfolio-item subject">
                                     <div class="caption">
-                                        <h4>Thumbnail Headline</h4>
-                                        <p>short thumbnail description</p>
+                                        <h4><?=$post->title;?></h4>
+                                        <p><?=$post->description;?></p>
                                         <p>
-                                        <a href="" class="label label-danger">Далее</a></p>
+                                        <?=Html::a("Далее", Url::to(['/articles/'.$post->url]), ['class' => 'label label-danger'])?>    
                                     </div>
-                                    <?=Html::img('@web/img/portfolio-1.jpg', ['class'=> 'img-portfolio img-responsive'])?>
-                                
+                                    <?=Html::img($post->image, ['class'=> 'img-portfolio img-responsive'])?>
                             </div>
                         </div>
-                        <div class="col-md-6 animation-element bounce-up">
-                            <div class="portfolio-item subject">
-                                    <div class="caption">
-                                        <h4>Thumbnail Headline</h4>
-                                        <p>short thumbnail description</p>
-                                        <p>
-                                        <a href="" class="label label-danger">Далее</a></p>
-                                    </div>
-                                    <?=Html::img('@web/img/portfolio-2.jpg', ['class'=> 'img-portfolio img-responsive'])?>                                  
-                            </div>
-                        </div>
-                        <div class="col-md-6 animation-element  bounce-up">
-                            <div class="portfolio-item subject">
-                                    <div class="caption">
-                                        <h4>Thumbnail Headline</h4>
-                                        <p>short thumbnail description</p>
-                                        <p>
-                                        <a href="" class="label label-danger">Далее</a></p>
-                                    </div>
-                                    <?=Html::img('@web/img/portfolio-3.jpg', ['class'=> 'img-portfolio img-responsive'])?>
-                            </div>
-                        </div>
-                        <div class="col-md-6 animation-element bounce-up">
-                            <div class="portfolio-item subject">
-                                    <div class="caption">
-                                        <h4>Thumbnail Headline</h4>
-                                        <p>short thumbnail description</p>
-                                        <p>
-                                        <a href="" class="label label-danger">Далее</a></p>
-                                    </div>
-                                    <?=Html::img('@web/img/portfolio-4.jpg', ['class'=> 'img-portfolio img-responsive'])?>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                     <!-- /.row (nested) -->
                     <a href="#" class="btn btn-dark">View More Items</a>

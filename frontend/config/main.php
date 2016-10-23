@@ -42,10 +42,19 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'suffix' => '.html',
             'class'=>'frontend\components\LangUrlManager',
             'rules' => [
-                '/' => 'site/index',
-                '<controller:\w+>/<action:\w+>/'=>'<controller>/<action>',
+                [
+                   'pattern' => '',
+                   'route' => 'site/index',
+                ],
+                [
+                   'pattern' => 'articles/<url:\w+>',
+                    'route' => 'articles/index',
+                    
+                ],
+                
             ],
         ],
         

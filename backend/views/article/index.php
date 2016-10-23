@@ -44,7 +44,18 @@ $this->params['breadcrumbs'][] = $this->title;
              'author',
              'hits',
              'url:url',
-
+             [
+            'label' => 'Image',
+            'format' => 'raw',
+            'value' => function($data){
+                
+                return ($data->image)? Html::img($data->image,[
+                    'alt'=>$data->title,
+                    'style' => 'width:150px;'
+                    ]) : NULL;
+                },
+            ],
+            
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

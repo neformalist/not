@@ -12,7 +12,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-
+use common\models\Article;
 /**
  * Site controller
  */
@@ -72,8 +72,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $posts = Article::find()->where(['visible' => '1'])->all();
+       
         $this->layout = 'index';
-        return $this->render('index');
+        return $this->render('index',[
+            'posts' => $posts,
+        ]);
     }
 
     /**

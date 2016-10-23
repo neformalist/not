@@ -7,7 +7,7 @@ use dosamigos\ckeditor\CKEditor;
 /* @var $this yii\web\View */
 /* @var $model common\models\Text */
 /* @var $form yii\widgets\ActiveForm */
-?>
+ ?>
 
 <div class="text-form">
 
@@ -15,9 +15,9 @@ use dosamigos\ckeditor\CKEditor;
     <?=  Html::tag('h2', $model->article->title);?>
     
 
-    <?= $form->field($model, 'text_ru')->widget(CKEditor::className())  ?>
+    <?= $form->field($model, 'text_ru')->widget(CKEditor::className(), ['preset' => 'full'])  ?>
 
-    <?= $form->field($model, 'text_en')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'text_en')->widget(CKEditor::className(), ['preset' => 'full']) ?>
     
     <?= $form->field($model, 'number_page')->textInput() ?>
     
@@ -27,6 +27,6 @@ use dosamigos\ckeditor\CKEditor;
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
-    <?php ActiveForm::end(); ?>
+    <?php ActiveForm::end();?>
 
 </div>

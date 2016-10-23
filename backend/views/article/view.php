@@ -45,6 +45,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'author',
             'hits',
             'url:url',
+            [
+            'label' => 'Image',
+            'format' => 'raw',
+            'value' => Html::img($model->image,[
+                    'alt'=>$model->title,
+                    'style' => 'max-width:550px;'
+                    ]),
+                
+            ],
         ],
     ]) ?>
     
@@ -57,8 +66,15 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             ['attribute' =>'text_ru',
+              'format' => 'html',  
               'value' => function ($data){
-                  return \yii\helpers\BaseStringHelper::truncate($data->text_ru, 130);
+                  return \yii\helpers\BaseStringHelper::truncate($data->text_ru, 50);
+              }
+            ],
+            ['attribute' =>'text_en',
+              'format' => 'html',  
+              'value' => function ($data){
+                  return \yii\helpers\BaseStringHelper::truncate($data->text_en, 50);
               }
             ],
             'number_page',
