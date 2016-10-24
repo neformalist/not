@@ -5,31 +5,32 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "{{%article}}".
+ * This is the model class for table "{{%example}}".
  *
  * @property integer $id
  * @property integer $category_id
- * @property string $title
+ * @property string $title_ru
+ * @property string $title_en
  * @property string $updated_at
  * @property string $created_at
  * @property integer $visible
- * @property string $description
- * @property string $author
+ * @property string $description_ru
+ * @property string $description_en
  * @property integer $hits
  * @property string $url
  *
  * @property Category $category
- * @property Meta[] $metas
- * @property Text[] $texts
+ * @property Images[] $images
+ * @property MetaExample[] $metaExamples
  */
-class Article extends \yii\db\ActiveRecord
+class Example extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%article}}';
+        return '{{%example}}';
     }
 
     /**
@@ -40,10 +41,9 @@ class Article extends \yii\db\ActiveRecord
         return [
             [['category_id', 'visible', 'hits'], 'integer'],
             [['updated_at', 'created_at'], 'safe'],
-            [['description'], 'string'],
-            [['url', 'title'], 'required'],
-            [['image'], 'string'],
-            [['title', 'author', 'url'], 'string', 'max' => 255],
+            [['description_ru', 'description_en'], 'string'],
+            [['title_ru',  'url'], 'required'],
+            [['title_ru', 'title_en', 'url'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
         ];
     }
@@ -56,15 +56,15 @@ class Article extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'category_id' => 'Category ID',
-            'title' => 'Title',
+            'title_ru' => 'Title Ru',
+            'title_en' => 'Title En',
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
             'visible' => 'Visible',
-            'description' => 'Description',
-            'author' => 'Author',
+            'description_ru' => 'Description Ru',
+            'description_en' => 'Description En',
             'hits' => 'Hits',
             'url' => 'Url',
-            'image' => 'IMAGE',
         ];
     }
 
@@ -79,16 +79,16 @@ class Article extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getMetas()
+    public function getImages()
     {
-        return $this->hasMany(Meta::className(), ['article_id' => 'id']);
+        return $this->hasMany(Images::className(), ['example_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getTexts()
+    public function getMetaExamples()
     {
-        return $this->hasMany(Text::className(), ['article_id' => 'id']);
+        return $this->hasMany(MetaExample::className(), ['example_id' => 'id']);
     }
 }
