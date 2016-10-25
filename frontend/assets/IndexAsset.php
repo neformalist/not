@@ -13,11 +13,13 @@ class IndexAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        'https://fonts.googleapis.com/icon?family=Material+Icons',
         'index/css/stylish-portfolio.css',
         'index/css/font-awesome/css/font-awesome.min.css',
         'index/css/scroll.css',
         'index/css/lightslider.min.css',
-        '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic'
+        '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic',
+        
     ];
     public $js = [
         'index/js/jquery.mb.YTPlayer.min.js',

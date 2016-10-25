@@ -30,7 +30,7 @@ body {
     padding: 0;
     font-size: 10vw;
     font-weight: 700;
-    color:#E06540;
+    color:#C74C27;
     /*text-shadow: 0px 3px 0px #b2a98f,
              0px 14px 10px rgba(0,0,0,0.15),
              0px 24px 2px rgba(0,0,0,0.1),
@@ -48,7 +48,7 @@ body {
     padding: 0;
     font-size: 5vw;
     font-weight: 700;
-    color:#E06540;
+    color:#C74C27;
       /*  text-shadow: 0px 3px 0px #b2a98f,
              0px 14px 10px rgba(0,0,0,0.15),
              0px 24px 2px rgba(0,0,0,0.1),
@@ -70,7 +70,7 @@ body {
     display:inline-block;
     font-size: 5vw;
     font-weight: 700;
-    color:#E06540;
+    color:#C74C27;
     border: 3px solid #E06540;
     border-radius: 50%;
     line-height: 1;
@@ -83,7 +83,7 @@ body {
     
 }
 .header-buttom:hover{
-   background-color: #E06540;
+   background-color: #C74C27;
    color:#FCFCF3;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
@@ -280,27 +280,69 @@ width: 100%;
 /* About */
 
 .about {
-    padding: 50px 0;
+    padding: 10% 0;
 }
 
 /* Services */
 
 .services {
     padding: 50px 0;
+    position: relative;
+}
+.services:before{
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: '';
+    right:0;
+    border-style: solid;
+    border-color: transparent transparent #C74C27;
+    border-width: 0px 0px 5.1vw 100vw;
+    top: -5vw;
 }
 
 .bg-primary{
-    background-color: #E06540;
+    background-color: #C74C27;
     color:#fff;
 }
 
 .service-item {
     margin-bottom: 30px;
 }
+.service-item ul{
+    list-style: none;
+    padding-left: 0;
+    font-size: 2rem;
+}
+
+.service-item h4{
+    font-size: 3rem;
+}
 
 .icon-orange{
-    color:#E06540;
+    color:#C74C27;
+    font-size: 10rem;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    display: block;
+    width: 100%;
+    line-height: 2;
 }
+
+.fa-stack{
+    width: 3em !important;
+    height: 3em !important;
+    line-height: 3em !important;
+}
+
+.fa-stack-2x{
+    font-size: 3em !important;
+}
+
+
+
+
 
 /* Callout */
 
@@ -320,6 +362,11 @@ width: 100%;
 
 .portfolio {
     padding: 50px 0;
+}
+
+#portfolio{
+   background-color: #FCFCF3;
+   padding-bottom: 10%;
 }
 
 .portfolio-item {
@@ -344,7 +391,7 @@ width: 100%;
     height:100%;
     padding:2%;
     text-align:center;
-    color:#E06540 !important;
+    color:#C74C27 !important;
     z-index:2;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -381,8 +428,24 @@ width: 100%;
     margin: 10px;
 }
 
+#technology{
+    position :relative;
+  
+}
+#technology:before{
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: '';
+    right:0;
+    border-style: solid;
+    border-color: transparent #fff;
+    border-width:   5.1vw  0px 0px  100vw;
+    top: -5vw;  
+}
+
 #lightSlider{
-    color :#E06540;
+    color :#C74C27;
 }
 
 .slideControls{
@@ -394,7 +457,7 @@ width: 100%;
 }
 .slideControls  i{
     font-size:5rem;
-    color :#E06540;
+    color :#C74C27;
     
     
   }

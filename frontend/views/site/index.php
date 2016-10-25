@@ -1,7 +1,9 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $posts */
+/* @var $posts common\models\Article */
+/* @var $examples common\models\Example */
+
 use yii\helpers\Html;
 use yii\helpers\Url;
 $this->title = 'My Yii Application';
@@ -50,54 +52,70 @@ $this->title = 'My Yii Application';
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <span class="fa-stack fa-4x">
+                                <span class="fa-stack fa-5x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x icon-orange"></i>
-                            </span>
+                                <i class="material-icons fa-stack-1x icon-orange">library_music</i>
+                                
+                                </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Score</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <ul>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Full scores in every format</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Parts extraction including cue notes</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Transpositions</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Piano reductions</li>
+                                </ul>
+                                
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <span class="fa-stack fa-4x">
+                                <span class="fa-stack fa-5x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x icon-orange"></i>
-                            </span>
+                                <i class="material-icons fa-stack-1x icon-orange">border_color</i>
+                                </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Edit</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <ul>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Full editorial support</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Long-standing experience with contemporary and unconventional notation</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Reproduction templates</li>
+                                </ul>
+                                
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <span class="fa-stack fa-4x">
+                                <span class="fa-stack fa-5x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x icon-orange"></i>
-                            </span>
+                                <i class="material-icons fa-stack-1x icon-orange">volume_down</i>
+                                </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Synthesis</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <ul>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Audio synthesis</li>
+                                    
+                                </ul>
+                               
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <span class="fa-stack fa-4x">
+                                <span class="fa-stack fa-5x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x icon-orange"></i>
-                            </span>
+                                <i class="material-icons fa-stack-1x icon-orange">print</i>
+                                </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Printing</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <ul>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Printing and binding (printing in-house up to DinA2+)</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Laser printouts on standard or high-quality paper</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Binding: saddle stitched booklets (Din A5, A4, A3 or 30,5 x 23 cm)</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -121,11 +139,11 @@ $this->title = 'My Yii Application';
    
   
     <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
+    <section id="article" class="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
+                    <h2>Articles</h2>
                     <hr class="small">
                     <div class="row">
                         <?php foreach ($posts as $post):?>
@@ -164,6 +182,42 @@ $this->title = 'My Yii Application';
             </div>
         </div>
     </aside>
+    
+    
+    
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Our Work</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <?php foreach ($examples as $example):?>
+                        <div class="col-md-6 animation-element slide-left">
+                            <div class="portfolio-item subject">
+                                    <div class="caption">
+                                        <h4><?=$example->title_ru;?></h4>
+                                        <p><?=$example->description_ru;?></p>
+                                        <p>
+                                        <?=Html::a("Далее", Url::to(['/articles/'.$example->url]), ['class' => 'label label-danger'])?>    
+                                    </div>
+                                    <?=Html::img($example->images[0]->image, ['class'=> 'img-portfolio img-responsive'])?>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <a href="#" class="btn btn-dark">View More Items</a>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    
+    
+     
     
      <!-- Technology -->
     <section id="technology" class="portfolio">
