@@ -150,8 +150,8 @@ $this->title = 'My Yii Application';
                         <div class="col-md-6 animation-element bounce-up">
                             <div class="portfolio-item subject">
                                     <div class="caption">
-                                        <h4><?=$post->title;?></h4>
-                                        <p><?=$post->description;?></p>
+                                        <h4><?=$post->title_ru;?></h4>
+                                        <p><?=\yii\helpers\BaseStringHelper::truncate($post->description_ru, 200);?></p>
                                         <p>
                                         <?=Html::a("Далее", Url::to(['/articles/'.$post->url]), ['class' => 'label label-danger'])?>    
                                     </div>
@@ -197,7 +197,7 @@ $this->title = 'My Yii Application';
                             <div class="portfolio-item subject">
                                     <div class="caption">
                                         <h4><?=$example->title_ru;?></h4>
-                                        <p><?=$example->description_ru;?></p>
+                                        <p><?=\yii\helpers\BaseStringHelper::truncate($example->description_ru, 200);?></p>
                                         <p>
                                         <?=Html::a("Далее", Url::to(['/articles/'.$example->url]), ['class' => 'label label-danger'])?>    
                                     </div>

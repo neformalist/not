@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /* @var $searchModelText backend\controllers\TextSearch */
 /* @var $dataProviderText yii\data\ActiveDataProvider */
 
-$this->title = $model->title;
+$this->title = $model->title_ru;
 $this->params['breadcrumbs'][] = ['label' => 'Articles', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -37,11 +37,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'category_id',
                 'value' => \yii\helpers\ArrayHelper::getValue($model, 'category.name')        
             ],
-            'title',
+            'title_ru',
+            'title_en',
             'updated_at',
             'created_at',
             'visible:boolean',
-            'description:ntext',
+            'description_ru:ntext',
+            'description_en:ntext',
             'author',
             'hits',
             'url:url',
@@ -49,7 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'label' => 'Image',
             'format' => 'raw',
             'value' => Html::img($model->image,[
-                    'alt'=>$model->title,
+                    'alt'=>$model->title_ru,
                     'style' => 'max-width:550px;'
                     ]),
                 

@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 return $article->category->name;
                             }
             ],
-            'title',
+            'title_ru',
             'updated_at',
             'created_at',
              [
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                  'filter' => [0 => "No", 1 => 'Yes'],
                  'format' => 'boolean'
              ],
-             'description:ntext',
+             'description_ru:ntext',
              'author',
              'hits',
              'url:url',
@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'value' => function($data){
                 
                 return ($data->image)? Html::img($data->image,[
-                    'alt'=>$data->title,
+                    'alt'=>$data->title_ru,
                     'style' => 'width:150px;'
                     ]) : NULL;
                 },

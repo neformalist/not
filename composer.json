@@ -21,7 +21,9 @@
         "yiisoft/yii2-swiftmailer": "*",
         "yiisoft/yii2-jui": "^2.0",
         "2amigos/yii2-ckeditor-widget": "^2.0",
-        "iutbay/yii2-kcfinder": "dev-master"
+        "iutbay/yii2-kcfinder": "dev-master",
+        "2amigos/yii2-date-time-picker-widget": "~1.0"
+        
         
         
     },

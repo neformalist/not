@@ -12,7 +12,8 @@ use backend\controllers\TextSearch;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
 use yii\db\ActiveRecord;
-
+use yii\behaviors\SluggableBehavior;
+use yii\helpers\Inflector;
 /**
  * ArticleController implements the CRUD actions for Article model.
  */
@@ -38,6 +39,12 @@ class ArticleController extends Controller
                 ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'], 
                 ],    
             'value' => new Expression('NOW()'),
+            ],
+            
+            [
+            'class' => SluggableBehavior::className(),
+            'attribute' => 'title_ru',
+            //'slugAttribute' => 'url',
             ],
         ];
     }

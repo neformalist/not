@@ -5,14 +5,16 @@ use yii\widgets\LinkPager;
 /* @var $post common\models\Article */
 /* @var $texts common\models\Article */
 ?>
-<?php $this->title = $post->title; ?>
-<?php $name = 'text_'.$lang;?>
-<h1><?=$post->title;?></h1>
+<?php $textI8n = 'text_'.$lang;?>
+<?php $titleI8n = 'title_'.$lang;?>
+<?php $this->title = $post->$titleI8n; ?>
+
+<h1><?=$post->$titleI8n;?></h1>
 
     <?=  Html::img($post->image);  ?>
 <p>
     <?php foreach ($texts as $text){
-    echo $text->$name;
+    echo $text->$textI8n;
     } ?>
     You may change the content of this page by modifying
     

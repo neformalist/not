@@ -40,10 +40,11 @@ class Article extends \yii\db\ActiveRecord
         return [
             [['category_id', 'visible', 'hits'], 'integer'],
             [['updated_at', 'created_at'], 'safe'],
-            [['description'], 'string'],
-            [['url', 'title'], 'required'],
+            [['description_en', 'description_ru'], 'string'],
+            [['title_ru'], 'required'],
+            [['title_en'], 'string'],
             [['image'], 'string'],
-            [['title', 'author', 'url'], 'string', 'max' => 255],
+            [['title_ru', 'title_en', 'author'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
         ];
     }
@@ -56,11 +57,13 @@ class Article extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'category_id' => 'Category ID',
-            'title' => 'Title',
+            'title_ru' => 'Title RU',
+            'title_en' => 'Title EN',
             'updated_at' => 'Updated At',
             'created_at' => 'Created At',
             'visible' => 'Visible',
-            'description' => 'Description',
+            'description_ru' => 'Description RU',
+            'description_en' => 'Description En',
             'author' => 'Author',
             'hits' => 'Hits',
             'url' => 'Url',
