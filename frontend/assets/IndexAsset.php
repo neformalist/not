@@ -18,7 +18,7 @@ class IndexAsset extends AssetBundle
         'index/css/font-awesome/css/font-awesome.min.css',
         'index/css/scroll.css',
         'index/css/lightslider.min.css',
-        '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic',
+        '//fonts.googleapis.com/css?family=PT+Sans',
         
     ];
     public $js = [

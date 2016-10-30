@@ -16,9 +16,9 @@ $this->title = 'My Yii Application';
   <div class="pattern-overlay">
   <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=7_96AtGSxg8',  containment:'.video-section', quality:'hd720', ratio:'16/9', autoPlay:true, mute:true, opacity:1}">bg</a>
     <div id="top" class="text-vertical-center">
-            <h1>Notes On Music</h1>
+            <h1><?=Yii::t('landing', 'header')?></h1>
             <br>
-            <h3>Classical Music Publishing &amp; Engraving</h3>
+            <h3><?=Yii::t('landing', 'header_capition')?></h3>
             <br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
    <a href="#about" class="header-buttom"><i class="fa fa-angle-down"></i></a>
@@ -32,8 +32,8 @@ $this->title = 'My Yii Application';
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                    <h2><?=Yii::t('landing', 'header_2')?></h2>
+                    <p class="lead"><?=Yii::t('landing', 'header_2_capition')?></p>
                 </div>
             </div>
             <!-- /.row -->
@@ -47,7 +47,7 @@ $this->title = 'My Yii Application';
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Our Services</h2>
+                    <h2><?=Yii::t('landing', 'service')?></h2>
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -58,13 +58,13 @@ $this->title = 'My Yii Application';
                                 
                                 </span>
                                 <h4>
-                                    <strong>Score</strong>
+                                    <strong><?=Yii::t('service', 'score')?></strong>
                                 </h4>
                                 <ul>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Full scores in every format</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Parts extraction including cue notes</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Transpositions</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Piano reductions</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'scoreItem1')?></li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'scoreItem2')?></li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'scoreItem3')?></li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'scoreItem4')?></li>
                                 </ul>
                                 
                             </div>
@@ -76,12 +76,12 @@ $this->title = 'My Yii Application';
                                 <i class="material-icons fa-stack-1x icon-orange">border_color</i>
                                 </span>
                                 <h4>
-                                    <strong>Edit</strong>
+                                    <strong><?=Yii::t('service', 'edit')?></strong>
                                 </h4>
                                 <ul>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Full editorial support</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Long-standing experience with contemporary and unconventional notation</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Reproduction templates</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'editItem1')?></li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'editItem2')?></li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'editItem3')?></li>
                                 </ul>
                                 
                             </div>
@@ -93,10 +93,10 @@ $this->title = 'My Yii Application';
                                 <i class="material-icons fa-stack-1x icon-orange">volume_down</i>
                                 </span>
                                 <h4>
-                                    <strong>Synthesis</strong>
+                                    <strong><?=Yii::t('service', 'synthesis')?></strong>
                                 </h4>
                                 <ul>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Audio synthesis</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'synthesisItem1')?></li>
                                     
                                 </ul>
                                
@@ -109,12 +109,12 @@ $this->title = 'My Yii Application';
                                 <i class="material-icons fa-stack-1x icon-orange">print</i>
                                 </span>
                                 <h4>
-                                    <strong>Printing</strong>
+                                    <strong><?=Yii::t('service', 'printing')?></strong>
                                 </h4>
                                 <ul>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Printing and binding (printing in-house up to DinA2+)</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Laser printouts on standard or high-quality paper</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Binding: saddle stitched booklets (Din A5, A4, A3 or 30,5 x 23 cm)</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'printingItem1')?></li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'printingItem2')?></li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> <?=Yii::t('service', 'printingItem3')?></li>
                                 </ul>
                             </div>
                         </div>
@@ -143,25 +143,26 @@ $this->title = 'My Yii Application';
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Articles</h2>
+                    <h2><?=Yii::t('landing', 'articles')?></h2>
                     <hr class="small">
                     <div class="row">
                         <?php foreach ($posts as $post):?>
                         <div class="col-md-6 animation-element bounce-up">
-                            <div class="portfolio-item subject">
-                                    <div class="caption">
-                                        <h4><?=$post->title_ru;?></h4>
-                                        <p><?=\yii\helpers\BaseStringHelper::truncate($post->description_ru, 200);?></p>
-                                        <p>
-                                        <?=Html::a("Далее", Url::to(['/articles/'.$post->url]), ['class' => 'label label-danger'])?>    
-                                    </div>
-                                    <?=Html::img($post->image, ['class'=> 'img-portfolio img-responsive'])?>
-                            </div>
+                            <?php $content = ''
+                                    . '<div class="portfolio-item subject">'
+                                    . '<div class="caption">'
+                                    . '<h4>'.$post->title_ru.'</h4>'
+                                    . '<p>'.\yii\helpers\BaseStringHelper::truncate($post->description_ru, 200).'</p>'
+                                    . '</div>'
+                                    . Html::img($post->image, ['class'=> 'img-portfolio img-responsive'])
+                                    . '</div>'; ?>
+                            <?=Html::a($content, Url::to(['/articles/'.$post->url]))?>    
+                            
                         </div>
                         <?php endforeach; ?>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
+                    <?=Html::a(Yii::t('landing', 'allButtom'), Url::to(['/articles']), ['class' => 'btn btn-dark'])?>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -189,25 +190,27 @@ $this->title = 'My Yii Application';
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
+                    <h2><?=Yii::t('landing', 'work')?></h2>
                     <hr class="small">
                     <div class="row">
                         <?php foreach ($examples as $example):?>
                         <div class="col-md-6 animation-element slide-left">
-                            <div class="portfolio-item subject">
-                                    <div class="caption">
-                                        <h4><?=$example->title_ru;?></h4>
-                                        <p><?=\yii\helpers\BaseStringHelper::truncate($example->description_ru, 200);?></p>
-                                        <p>
-                                        <?=Html::a("Далее", Url::to(['/articles/'.$example->url]), ['class' => 'label label-danger'])?>    
-                                    </div>
-                                    <?=Html::img($example->images[0]->image, ['class'=> 'img-portfolio img-responsive'])?>
-                            </div>
+                            <?php $content = ''
+                                    . '<div class="portfolio-item subject">'
+                                    . '<div class="caption">'
+                                    . '<h4>'.$example->title_ru.'</h4>'
+                                    . '<p>'.\yii\helpers\BaseStringHelper::truncate($example->description_ru, 200).'</p>'
+                                    . '</div>'
+                                    . Html::img($example->images[0]->image, ['class'=> 'img-portfolio img-responsive'])
+                                    . '</div>'; ?>
+                            <?=Html::a($content, Url::to(['/example/'.$example->url]))?>    
+                           
                         </div>
                         <?php endforeach; ?>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
+                    <?=Html::a(Yii::t('landing', 'allButtom'), Url::to(['/examples']), ['class' => 'btn btn-dark'])?>
+                   
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -224,7 +227,7 @@ $this->title = 'My Yii Application';
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Technology</h2>
+                    <h2><?=Yii::t('landing', 'technology')?></h2>
                     <hr class="small">
                      <div class="slideControls">
                             <a class="slidePrev">

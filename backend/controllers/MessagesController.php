@@ -3,21 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Article;
-use backend\controllers\ArticleSearch;
+use common\models\Messages;
+use common\models\MessagesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\controllers\TextSearch;
-use yii\behaviors\TimestampBehavior;
-use yii\db\Expression;
-use yii\db\ActiveRecord;
-
 
 /**
- * ArticleController implements the CRUD actions for Article model.
+ * MessagesController implements the CRUD actions for Messages model.
  */
-class ArticleController extends Controller
+class MessagesController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,30 +25,19 @@ class ArticleController extends Controller
                 'actions' => [
                     'delete' => ['POST'],
                 ],
-                
             ],
-            'timestamp' =>[
-            'class' => TimestampBehavior::className(),
-            'attributes' => [
-                ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
-                ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'], 
-                ],    
-            'value' => new Expression('NOW()'),
-            ],
-            
-            
         ];
     }
 
     /**
-     * Lists all Article models.
+     * Lists all Messages models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ArticleSearch();
+        $searchModel = new MessagesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -61,39 +45,25 @@ class ArticleController extends Controller
     }
 
     /**
-     * Displays a single Article model.
+     * Displays a single Messages model.
      * @param integer $id
      * @return mixed
      */
     public function actionView($id)
     {
-        $searchModelText = new TextSearch();
-        $dataProviderText = $searchModelText->search(Yii::$app->request->queryParams);
-        
-        $options_delete = [
-                    'title' => Yii::t('yii', 'Delete'),
-                    'aria-label' => Yii::t('yii', 'Delete'),
-                    'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
-                    'data-method' => 'post',
-                    'data-pjax' => '0',];
-        
         return $this->render('view', [
             'model' => $this->findModel($id),
-            'article_id' => $id,
-            'searchModelText' => $searchModelText,
-            'dataProviderText' => $dataProviderText,
-            'options_delete' => $options_delete,
         ]);
     }
 
     /**
-     * Creates a new Article model.
+     * Creates a new Messages model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Article();
+        $model = new Messages();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -105,7 +75,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * Updates an existing Article model.
+     * Updates an existing Messages model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -124,7 +94,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * Deletes an existing Article model.
+     * Deletes an existing Messages model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -137,15 +107,15 @@ class ArticleController extends Controller
     }
 
     /**
-     * Finds the Article model based on its primary key value.
+     * Finds the Messages model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Article the loaded model
+     * @return Messages the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Article::findOne($id)) !== null) {
+        if (($model = Messages::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

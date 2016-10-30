@@ -12,7 +12,7 @@ use dosamigos\ckeditor\CKEditor;
 <div class="text-form">
 
     <?php $form = ActiveForm::begin(); ?>
-    <?=  Html::tag('h2', $model->article->title);?>
+    <?=  Html::tag('h2', $model->article->title_ru);?>
     
 
     <?= $form->field($model, 'text_ru')->widget(CKEditor::className(), ['preset' => 'full'])  ?>

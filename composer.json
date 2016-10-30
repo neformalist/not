@@ -22,7 +22,17 @@
         "yiisoft/yii2-jui": "^2.0",
         "2amigos/yii2-ckeditor-widget": "^2.0",
         "iutbay/yii2-kcfinder": "dev-master",
-        "2amigos/yii2-date-time-picker-widget": "~1.0"
+        "2amigos/yii2-date-time-picker-widget": "~1.0",
+        "zabachok/yii2-sluggable-behavior": "*",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "mihaildev/yii2-elfinder": "*",
+        "yeesoft/yii2-lightbox": "*"
+       
+        
+        
+        
+        
+       
         
         
         

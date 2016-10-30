@@ -34,3 +34,4 @@ phpunit.phar
 
 /Apache-2.4_vhost.conf
 
+/common/upload

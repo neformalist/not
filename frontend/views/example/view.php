@@ -1,0 +1,42 @@
+<?php
+use yeesoft\lightbox\Lightbox;
+use yii\helpers\Html;
+/* @var $this yii\web\View */
+/* @var $example common\models\Example */
+/* @var $lang frontend\models\Lang */
+?>
+<?php $this->title = $example->{('title_'.$lang)}; ?>
+
+<h1><?=$example->{('title_'.$lang)}?></h1>
+
+
+<?=$example->{('description_'.$lang)}?>
+
+<?php $images = []; $i = 1;
+    foreach ($example->images as $image){
+               $imageItem = [
+                   'thumb' => $image->image,
+                   'image' => $image->image,
+                   'title' => $example->{('title_'.$lang)}.' '.$i,
+                   'group' => 'image-set1',
+               ];
+               $i++;
+               $images[] = array_merge($images, $imageItem);       
+    }
+    
+?>
+<div class="text-center" style="background-color: #000;">
+<?=Lightbox::widget([
+    'options' => [
+        'fadeDuration' => '2000',
+        'albumLabel' => "Изображение %1 из %2",
+        'wrapAround' => true,
+        'alwaysShowNavOnTouchDevices' => true
+     ],
+    'linkOptions' => ['class' => 'pull-left'],
+    'imageOptions' => ['class' => 'thumbnail', 'width' => 200],
+    'items' => $images,           
+]);?>
+</div>
+
+

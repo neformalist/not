@@ -1,16 +1,16 @@
 <?php
 
-namespace backend\controllers;
+namespace common\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Images;
+use common\models\Messages;
 
 /**
- * ImagesSearch represents the model behind the search form about `common\models\Images`.
+ * MessagesSearch represents the model behind the search form about `common\models\Messages`.
  */
-class ImagesSearch extends Images
+class MessagesSearch extends Messages
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class ImagesSearch extends Images
     public function rules()
     {
         return [
-            [['id', 'example_id', 'visible'], 'integer'],
-            [['image'], 'safe'],
+            [['id', 'new'], 'integer'],
+            [['first_name', 'last_name', 'email', 'phone', 'text', 'file', 'created_at'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class ImagesSearch extends Images
      */
     public function search($params)
     {
-        $query = Images::find()->where(['example_id' => $params['id']]);
+        $query = Messages::find();
 
         // add conditions that should always apply here
 
@@ -60,11 +60,16 @@ class ImagesSearch extends Images
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'example_id' => $this->example_id,
-            'visible' => $this->visible,
+            'created_at' => $this->created_at,
+            'new' => $this->new,
         ]);
 
-        $query->andFilterWhere(['like', 'image', $this->image]);
+        $query->andFilterWhere(['like', 'first_name', $this->first_name])
+            ->andFilterWhere(['like', 'last_name', $this->last_name])
+            ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'phone', $this->phone])
+            ->andFilterWhere(['like', 'text', $this->text])
+            ->andFilterWhere(['like', 'file', $this->file]);
 
         return $dataProvider;
     }

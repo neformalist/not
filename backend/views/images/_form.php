@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use iutbay\yii2kcfinder\KCFinderInputWidget;
+use backend\models\MyInputFile;
 /* @var $this yii\web\View */
 /* @var $model common\models\Images */
 /* @var $form yii\widgets\ActiveForm */
@@ -11,10 +11,21 @@ use iutbay\yii2kcfinder\KCFinderInputWidget;
 <div class="images-form">
 
     <?php $form = ActiveForm::begin(); ?>
+    
+    <?=  Html::tag('h2', $model->example->title_ru);?>
+    
+    <?=Html::img($model->image,['width' => 500, 'id' => 'img']);?>
 
-    <?= $form->field($model, 'example_id')->textInput() ?>
-
-    <?= $form->field($model, 'image')->widget(KCFinderInputWidget::className()) ?>
+    <?= $form->field($model, 'image')->widget(MyInputFile::className(), [
+    'language'      => 'ru',
+    'controller'    => 'elfinder', // вставляем название контроллера, по умолчанию равен elfinder
+    'filter'        => 'image',    // фильтр файлов, можно задать массив фильтров https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#wiki-onlyMimes
+    'template'      => '<div class="input-group">{input}<span class="input-group-btn">{button}</span></div>',
+    'options'       => ['class' => 'form-control'],
+    'buttonOptions' => ['class' => 'btn btn-default'],
+    'multiple'      => false,       // возможность выбора нескольких файлов
+        
+    ]); ?>
 
     <?= $form->field($model, 'visible')->checkbox() ?>
 

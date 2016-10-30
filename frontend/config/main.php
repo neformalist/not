@@ -50,10 +50,22 @@ return [
                    'route' => 'site/index',
                 ],
                 [
-                   'pattern' => 'articles/<url:\w+>',
-                    'route' => 'articles/index',
-                    
+                   'pattern' => 'examples',
+                   'route' => 'example/index',  
                 ],
+                [
+                   'pattern' => 'example/<url:[\w\-]+>',
+                   'route' => 'example/view',  
+                ],
+                [
+                   'pattern' => 'articles',
+                   'route' => 'articles/index',   
+                ],
+                [
+                   'pattern' => 'articles/<url:[\w\-]+>',
+                   'route' => 'articles/view',   
+                ],
+                
                 
             ],
         ],
@@ -67,6 +79,8 @@ return [
                     'sourceLanguage' => 'ru',
                     'fileMap' => [
                         'main' => 'main.php',
+                        'landing' => 'landing.php',
+                        'service' => 'service.php',
                     ],
                 ],
             ],

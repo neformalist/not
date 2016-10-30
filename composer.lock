@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c71243eab54be48cd648116a6cc877a1",
+    "hash": "86904e7396cb0d572585812b834f4a30",
+    "content-hash": "29f756337752e63b0f3cd3564f013259",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
@@ -277,6 +278,52 @@
                 "jquery",
                 "mask",
                 "plugins"
+            ]
+        },
+        {
+            "name": "bower-asset/lightbox2",
+            "version": "v2.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lokesh/lightbox2.git",
+                "reference": "3c792b46c0e5dd6923f9d71db8cad611beef8050"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lokesh/lightbox2/zipball/3c792b46c0e5dd6923f9d71db8cad611beef8050",
+                "reference": "3c792b46c0e5dd6923f9d71db8cad611beef8050",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": "~2"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "./dist/js/lightbox.js",
+                    "./dist/css/lightbox.css",
+                    "./dist/images/close.png",
+                    "./dist/images/loading.gif",
+                    "./dist/images/next.png",
+                    "./dist/images/prev.png"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "bower_components"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "The original Lightbox script. Uses jQuery.",
+            "keywords": [
+                "gallery",
+                "images",
+                "lightbox",
+                "lightbox2",
+                "overlay",
+                "slideshow"
             ]
         },
         {
@@ -599,6 +646,274 @@
             "time": "2016-05-03 14:55:59"
         },
         {
+            "name": "kartik-v/bootstrap-fileinput",
+            "version": "v4.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
+                "reference": "6e1a8ca5ca04d4927540ccf18bbfc3253286bd0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/6e1a8ca5ca04d4927540ccf18bbfc3253286bd0c",
+                "reference": "6e1a8ca5ca04d4927540ccf18bbfc3253286bd0c",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\plugins\\fileinput\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "An enhanced HTML 5 file input for Bootstrap 3.x with features for file preview for many file types, multiple selection, ajax uploads, and more.",
+            "homepage": "https://github.com/kartik-v/bootstrap-fileinput",
+            "keywords": [
+                "ajax",
+                "bootstrap",
+                "delete",
+                "file",
+                "image",
+                "input",
+                "jquery",
+                "multiple",
+                "preview",
+                "progress",
+                "upload"
+            ],
+            "time": "2016-09-20 05:47:41"
+        },
+        {
+            "name": "kartik-v/yii2-krajee-base",
+            "version": "v1.8.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-krajee-base.git",
+                "reference": "8f558809e6093c8f4f4599b7b9fd64b366b22a60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/8f558809e6093c8f4f4599b7b9fd64b366b22a60",
+                "reference": "8f558809e6093c8f4f4599b7b9fd64b366b22a60",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2-bootstrap": "@dev"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\base\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "Base library and foundation components for all Yii2 Krajee extensions.",
+            "homepage": "https://github.com/kartik-v/yii2-krajee-base",
+            "keywords": [
+                "base",
+                "extension",
+                "foundation",
+                "krajee",
+                "widget",
+                "yii2"
+            ],
+            "time": "2016-09-04 09:25:29"
+        },
+        {
+            "name": "kartik-v/yii2-widget-fileinput",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-widget-fileinput.git",
+                "reference": "3b8f6819f2cd01becff5251b8b952ac3e57b903a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-fileinput/zipball/3b8f6819f2cd01becff5251b8b952ac3e57b903a",
+                "reference": "3b8f6819f2cd01becff5251b8b952ac3e57b903a",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/bootstrap-fileinput": "~4.2",
+                "kartik-v/yii2-krajee-base": "~1.7"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\file\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "An enhanced FileInput widget for Bootstrap 3.x with file preview, multiple selection, and more features (sub repo split from yii2-widgets)",
+            "homepage": "https://github.com/kartik-v/yii2-widget-fileinput",
+            "keywords": [
+                "extension",
+                "file",
+                "form",
+                "input",
+                "jquery",
+                "plugin",
+                "upload",
+                "widget",
+                "yii2"
+            ],
+            "time": "2016-06-16 06:53:01"
+        },
+        {
+            "name": "mihaildev/yii2-elfinder",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MihailDev/yii2-elfinder.git",
+                "reference": "0314ca3c15676ed047dc763852b02d2d9dd418ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MihailDev/yii2-elfinder/zipball/0314ca3c15676ed047dc763852b02d2d9dd418ec",
+                "reference": "0314ca3c15676ed047dc763852b02d2d9dd418ec",
+                "shasum": ""
+            },
+            "require": {
+                "studio-42/elfinder": "^2.1.10",
+                "yiisoft/yii2-jui": "*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "mihaildev\\elfinder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Mihail",
+                    "email": "mihail.kucher@gmail.com",
+                    "homepage": "https://github.com/MihailDev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Yii2 ElFinder",
+            "homepage": "https://github.com/MihailDev/yii2-elfinder",
+            "keywords": [
+                "elfinder",
+                "filemanager",
+                "yii"
+            ],
+            "time": "2016-06-30 12:03:17"
+        },
+        {
+            "name": "studio-42/elfinder",
+            "version": "2.1.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Studio-42/elFinder.git",
+                "reference": "2b0d0db00079a652bcfb8ee4ad82720c5f6c33dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/2b0d0db00079a652bcfb8ee4ad82720c5f6c33dc",
+                "reference": "2b0d0db00079a652bcfb8ee4ad82720c5f6c33dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "suggest": {
+                "barryvdh/elfinder-flysystem-driver": "VolumeDriver for elFinder to use Flysystem as a root.",
+                "dropbox-php/dropbox-php": "elFinder Volume driver `Dropbox` require `dropbox-php/dropbox-php`.",
+                "nao-pon/flysystem-google-drive": "require in GoogleDrive network volume mounting.",
+                "pear/http_oauth": "dropbox-php require `pear/http_oauth` or `PHP OAuth extension`."
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitry Levashov",
+                    "email": "dio@std42.ru",
+                    "homepage": "http://std42.ru"
+                },
+                {
+                    "name": "Troex Nevelin",
+                    "email": "troex@fury.scancode.ru",
+                    "homepage": "http://std42.ru"
+                },
+                {
+                    "name": "Naoki Sawada",
+                    "email": "hypweb@gmail.com",
+                    "homepage": "http://xoops.hypweb.net"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/Studio-42/elFinder/contributors"
+                }
+            ],
+            "description": "File manager for web",
+            "homepage": "http://elfinder.org",
+            "time": "2016-10-11 04:44:07"
+        },
+        {
             "name": "sunhater/kcfinder",
             "version": "dev-master",
             "source": {
@@ -705,6 +1020,48 @@
                 "mailer"
             ],
             "time": "2016-07-08 11:51:25"
+        },
+        {
+            "name": "yeesoft/yii2-lightbox",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yeesoft/yii2-lightbox.git",
+                "reference": "82c7fb3577304acb8a0418de23c57a4e4a508f10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yeesoft/yii2-lightbox/zipball/82c7fb3577304acb8a0418de23c57a4e4a508f10",
+                "reference": "82c7fb3577304acb8a0418de23c57a4e4a508f10",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/lightbox2": "~2.8",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yeesoft\\lightbox\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Taras Makitra",
+                    "email": "makitrataras@gmail.com"
+                }
+            ],
+            "description": "Lightbox widget for Yii2",
+            "keywords": [
+                "lightbox",
+                "module",
+                "yii2"
+            ],
+            "time": "2016-04-27 14:46:42"
         },
         {
             "name": "yiisoft/yii2",
@@ -996,6 +1353,49 @@
                 "yii2"
             ],
             "time": "2016-09-09 11:48:11"
+        },
+        {
+            "name": "zabachok/yii2-sluggable-behavior",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zabachok/yii2-sluggable-behavior.git",
+                "reference": "7d2bed2ce934b87c6b48249b5c40d34a2ee67bd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zabachok/yii2-sluggable-behavior/zipball/7d2bed2ce934b87c6b48249b5c40d34a2ee67bd0",
+                "reference": "7d2bed2ce934b87c6b48249b5c40d34a2ee67bd0",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "zabachok\\behaviors\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniil Romanov",
+                    "email": "zabachok@zabachok.net"
+                }
+            ],
+            "description": "Поведение для транслитерации кирилицы в латиницу.",
+            "keywords": [
+                "behavor",
+                "extension",
+                "slugg",
+                "translit",
+                "yii2"
+            ],
+            "time": "2016-05-27 10:27:48"
         }
     ],
     "packages-dev": [
@@ -1309,7 +1709,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "iutbay/yii2-kcfinder": 20
+        "iutbay/yii2-kcfinder": 20,
+        "kartik-v/yii2-widget-fileinput": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

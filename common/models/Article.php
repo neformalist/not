@@ -3,7 +3,7 @@
 namespace common\models;
 
 use Yii;
-
+use zabachok\behaviors\SluggableBehavior;
 /**
  * This is the model class for table "{{%article}}".
  *
@@ -27,6 +27,17 @@ class Article extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public function behaviors(){
+     
+        return [
+                [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'title_ru',
+                'slugAttribute' => 'url',
+                ]
+            ];
+    }
+    
     public static function tableName()
     {
         return '{{%article}}';

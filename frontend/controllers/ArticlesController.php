@@ -9,10 +9,10 @@ use yii\data\Pagination;
 class ArticlesController extends \yii\web\Controller
 {
     
-    public function actionIndex($url)
+    public function actionView($url)
     {
         
-        $post = Article::findOne(['url'=>$url]);
+        $post = Article::findOne(['url'=>$url, 'visible' => 1]);
         if(!$post) throw new HttpException(404 ,'Not found');
         
         $lang =\frontend\models\Lang::$current->url;
@@ -28,7 +28,7 @@ class ArticlesController extends \yii\web\Controller
         ->limit($pages->limit)
         ->all();
         
-           return $this->render('index',[
+           return $this->render('view',[
                'post' => $post,
                'texts' => $texts,
                'pages' => $pages,
@@ -36,6 +36,16 @@ class ArticlesController extends \yii\web\Controller
            ]); 
         
  
+    }
+    
+    
+    public function actionIndex() {
+        
+        $post = Article::findAll(['visible' => 1]);
+        
+        return $this->render('index',[
+            'post' => $post,
+        ]);
     }
     
     private function registerTag($tags){

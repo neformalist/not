@@ -57,7 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['attribute' =>'image',
               'format' => 'html',  
               'value' => function($data){
-                
+                 
                 return ($data->image)? Html::img($data->image,[
                     'style' => 'width:150px;'
                     ]) : NULL;
