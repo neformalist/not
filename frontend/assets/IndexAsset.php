@@ -22,10 +22,12 @@ class IndexAsset extends AssetBundle
         
     ];
     public $js = [
+        'index/js/parallax-scroll.js',
         'index/js/jquery.mb.YTPlayer.min.js',
         'index/js/lightslider.min.js',
         'index/js/index.js',
         'index/js/scroll.js',
+        
     ];
     public $depends = [
         'yii\web\YiiAsset',

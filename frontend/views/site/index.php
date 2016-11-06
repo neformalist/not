@@ -129,9 +129,12 @@ $this->title = 'My Yii Application';
     </section>
 
     <!-- Callout -->
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h2>Vertically Centered Text</h2>
+    <aside class="callout ">
+        <div class="text-vertical-center" >
+            
+            <div class="overflow-scroll scrollflow -slide-top" data-scrollflow-start="0" data-scrollflow-distance="100" data-scrollflow-amount="200"></div>
+            <div class="overflow-bg"></div>
+            <h2 class="scrollflow -slide-bottom -opacity" data-scrollflow-start="0" data-scrollflow-distance="50" data-scrollflow-amount="100" >Vertically Centered Text</h2>
         </div>
     </aside>
 
