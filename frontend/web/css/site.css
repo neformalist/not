@@ -117,3 +117,71 @@ a.desc:after {
     padding: 3%;
     background-color: #fff;
 }
+
+
+    .custom-input {
+      position: relative;
+     
+      padding-top: 20px;
+      
+    }  
+      input {
+        padding-left: 15px;
+      }
+
+
+     label {
+        cursor: text;
+        margin: 0;
+        padding: 0;
+        left: 15px;
+        top: 27px;
+        position: absolute;
+        font-size: 14px;
+        color: #ccc;
+        font-weight: normal;
+        transition: all .3s ease;
+     } 
+    .active  {
+          top: 0;
+          left: 0;
+          font-size: 12px;
+    }  
+      
+    .focusIn {
+            color: #66afe9;
+          }
+
+      textarea{
+        resize:none;
+       
+      }      
+      .textAreaHeight{
+         transition: all .5s ease;
+         height:100px !important;  
+      }
+      .in-center{
+         
+          border: 2px solid #C74C27;
+          
+          margin: auto; 
+          max-width: 600px;
+      }
+      .form-control{
+          border-color: #000;
+          
+      }
+      .head-contact{
+         
+          background-color: #C74C27;
+          color: #fff;
+          padding: 2%;
+      }
+      .head-contact h1{
+        
+        margin: 0;
+      }
+      .form-custom{
+          padding: 3%; 
+      }
+      

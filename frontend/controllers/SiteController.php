@@ -125,6 +125,7 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
+        
         $model = new Messages();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             
@@ -141,6 +142,7 @@ class SiteController extends Controller
 
             return $this->refresh();
         } else {
+            $this->view->registerJsFile('/js/input_fields.js', ['depends' => 'yii\web\JqueryAsset']);
             return $this->render('contact', [
                 'model' => $model,
             ]);
