@@ -50,7 +50,7 @@ return [
                    'route' => 'site/index',
                 ],
                 [
-                   'pattern' => 'examples',
+                   'pattern' => '/examples',
                    'route' => 'example/index',  
                 ],
                 [

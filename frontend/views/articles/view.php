@@ -7,7 +7,7 @@ use yii\widgets\LinkPager;
 ?>
 
 <?php $this->title = $post->{('title_'.$lang)}; ?>
-
+<div class="article">
 <h1><?=$post->{('title_'.$lang)};?></h1>
 
     
@@ -21,3 +21,4 @@ use yii\widgets\LinkPager;
 <?=LinkPager::widget([
     'pagination' => $pages,
 ]);?>
+</div>

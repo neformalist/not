@@ -2,9 +2,9 @@
 
 return [
     'home'=>'Home',
-    'about'=>'About',
-    'login'=>'Login',
-    'signup'=>'Signup',
+    'examples'=>'Examples',
+    'articles'=>'Articles',
+    'preis'=>'Preis',
     'contact'=>'Contact',
     'language'=>"Language"
 ];

@@ -15,10 +15,16 @@ $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
-    .wrap{
-        background-color: #F9F7D5;
+    .breadcrumb{
+        display: inline-block;
+       margin: 2%;
+       background-color: rgba(245,245,245,.8); 
+    }
+    .breadcrumb a{
+        color: #C74C27;
     }
 </style>
+
 <div class="site-contact in-center">
     <div class="head-contact">
         <h1><?= Html::encode($this->title) ?></h1>
@@ -60,6 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'showUpload' => false,
                         'browseLabel' => '',
                         'removeLabel' => '',
+                        'browseClass' => 'btn btn-orange',
                         'mainClass' => 'input-group-md',
                        ] 
                 ])?>
@@ -69,7 +76,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ])*/ ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                    <?= Html::submitButton('Submit', ['class' => 'btn btn-orange btn-large', 'name' => 'contact-button']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>

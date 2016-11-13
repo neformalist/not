@@ -19,6 +19,8 @@ class ArticlesController extends \yii\web\Controller
         
         $texts = $post->getTexts();
         
+        $this->view->registerCssFile('/css/article.css',['depends' =>'frontend\assets\AppAsset']);
+        
         $this->registerTag($post->getMetas()->all());
        
         $textsCount = clone $texts;

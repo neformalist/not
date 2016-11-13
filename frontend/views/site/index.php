@@ -48,7 +48,7 @@ $this->title = 'My Yii Application';
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
                     <h2><?=Yii::t('landing', 'service')?></h2>
-                    <hr class="small">
+                    <hr class="small" style="max-width: 30vw">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
@@ -128,13 +128,61 @@ $this->title = 'My Yii Application';
         <!-- /.container -->
     </section>
 
-    <!-- Callout -->
+    
+     <!-- Callout -->
     <aside class="callout ">
-        <div class="text-vertical-center" >
+        <div class="text-vertical-callout" >
             
             <div class="overflow-scroll scrollflow -slide-top" data-scrollflow-start="0" data-scrollflow-distance="100" data-scrollflow-amount="200"></div>
             <div class="overflow-bg"></div>
             <h2 class="scrollflow -slide-bottom -opacity" data-scrollflow-start="0" data-scrollflow-distance="50" data-scrollflow-amount="100" >Vertically Centered Text</h2>
+        </div>
+    </aside>
+    
+     <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2><?=Yii::t('landing', 'work')?></h2>
+                    <hr class="small">
+                    <div class="row">
+                        <?php foreach ($examples as $example):?>
+                        <div class="col-md-6 animation-element slide-left">
+                            <?php $content = ''
+                                    . '<div class="portfolio-item subject">'
+                                    . '<div class="caption">'
+                                    . '<h4>'.$example->title_ru.'</h4>'
+                                    . '<p>'.\yii\helpers\BaseStringHelper::truncate($example->description_ru, 200).'</p>'
+                                    . '</div>'
+                                    . Html::img($example->images[0]->image, ['class'=> 'img-portfolio img-responsive'])
+                                    . '</div>'; ?>
+                            <?=Html::a($content, Url::to(['/example/'.$example->url]))?>    
+                           
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <?=Html::a(Yii::t('landing', 'allButtom'), Url::to(['/examples']), ['class' => 'btn btn-dark'])?>
+                   
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    
+   
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>The buttons below are impossible to resist.</h3>
+                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
+                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                </div>
+            </div>
         </div>
     </aside>
 
@@ -174,53 +222,10 @@ $this->title = 'My Yii Application';
         <!-- /.container -->
     </section>
 
-    <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-                </div>
-            </div>
-        </div>
-    </aside>
     
     
     
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2><?=Yii::t('landing', 'work')?></h2>
-                    <hr class="small">
-                    <div class="row">
-                        <?php foreach ($examples as $example):?>
-                        <div class="col-md-6 animation-element slide-left">
-                            <?php $content = ''
-                                    . '<div class="portfolio-item subject">'
-                                    . '<div class="caption">'
-                                    . '<h4>'.$example->title_ru.'</h4>'
-                                    . '<p>'.\yii\helpers\BaseStringHelper::truncate($example->description_ru, 200).'</p>'
-                                    . '</div>'
-                                    . Html::img($example->images[0]->image, ['class'=> 'img-portfolio img-responsive'])
-                                    . '</div>'; ?>
-                            <?=Html::a($content, Url::to(['/example/'.$example->url]))?>    
-                           
-                        </div>
-                        <?php endforeach; ?>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <?=Html::a(Yii::t('landing', 'allButtom'), Url::to(['/examples']), ['class' => 'btn btn-dark'])?>
-                   
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+   
     
     
      
@@ -296,39 +301,7 @@ $this->title = 'My Yii Application';
         </iframe>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
-                    </h4>
-                    <p>3481 Melrose Place
-                        <br>Beverly Hills, CA 90210</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
+   
 
    
 

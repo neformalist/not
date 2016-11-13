@@ -13,11 +13,15 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        'css/menu.css',
+        'index/css/font-awesome/css/font-awesome.min.css',
+        '//fonts.googleapis.com/css?family=PT+Sans',
     ];
     public $js = [
+        'js/menu.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        'yii\bootstrap\BootstrapPluginAsset',
     ];
 }

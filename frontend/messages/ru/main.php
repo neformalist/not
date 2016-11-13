@@ -1,9 +1,9 @@
 <?php
 return [
     'home'=>'Главная',
-    'about'=>'О нас',
-    'login'=>'Вход',
-    'signup'=>'Регистрация',
+    'examples'=>'Примеры',
+    'articles'=>'Статьи',
+    'preis'=>'Стоимость',
     'contact'=>'Контакты',
     'language'=>"Язык"
 ];

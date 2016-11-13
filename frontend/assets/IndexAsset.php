@@ -18,15 +18,18 @@ class IndexAsset extends AssetBundle
         'index/css/font-awesome/css/font-awesome.min.css',
         'index/css/scroll.css',
         'index/css/lightslider.min.css',
+        'css/menu.css',
         '//fonts.googleapis.com/css?family=PT+Sans',
         
     ];
     public $js = [
         'index/js/parallax-scroll.js',
+        'js/menu.js',
         'index/js/jquery.mb.YTPlayer.min.js',
         'index/js/lightslider.min.js',
         'index/js/index.js',
         'index/js/scroll.js',
+       
         
     ];
     public $depends = [

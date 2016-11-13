@@ -125,7 +125,7 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
-        
+        $this->layout = 'contact';
         $model = new Messages();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             
@@ -154,9 +154,10 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionAbout()
+    public function actionPreis()
     {
-        return $this->render('about');
+        $this->view->registerCssFile('/css/preis.css', ['depends' =>'frontend\assets\AppAsset']);
+        return $this->render('preis');
     }
 
     /**

@@ -7,14 +7,10 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use frontend\assets\IndexAsset;
-use common\widgets\Alert;
-use yii\jui\Accordion;
 use frontend\assets\AppAsset;
+use common\widgets\Alert;
 
-
-IndexAsset::register($this);
-
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -28,52 +24,29 @@ IndexAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+<div style="height: 100vh; width: 100%; position: fixed; background: url(/img/bg-contact.jpg) no-repeat center center ; background-size: cover; z-index: -100 "></div>
+<div style="height: 100vh; width: 100%; background-color: rgba(255,212,212,.5); position: fixed; z-index: -90"></div>
 
-   <?php
-   /* NavBar::begin([
-        'brandLabel' => 'My Company',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label'=>'', 'options'=>['id'=>'menu-toggle', 'class'=>'fa fa-bars']],
-        ['label' => Yii::t('main', 'home'), 'options' => ['']],
-        ['label' => Yii::t('main', 'home'), 'url' => ['/site/index']],
-        ['label' => Yii::t('main', 'about'), 'url' => ['/site/about']],
-        ['label' => Yii::t('main', 'contact'), 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => Yii::t('main', 'signup'), 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => Yii::t('main', 'login'), 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    
-    $menuItems[]= ['label' => \frontend\models\Lang::getCurrent()->name,
-                   'items'=>[\frontend\widgets\LangWidget::widget()]
-                  ];
-    
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    */
-   $menu = Yii::getAlias('@frontend') . '\views\layouts\menu.php';
-   include $menu;
-   ?>
-    
-   
+<?php
+    $menu = Yii::getAlias('@frontend') . '\views\layouts\menu.php';
+    include $menu;
+?>
+
+
+
+
+<div class="wrap">
+ 
+
+    <div class="container">
+        <?= Breadcrumbs::widget([
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ]) ?>
+        <?= Alert::widget() ?>
         <?= $content ?>
+    </div>
+</div>
+
 
  <!-- Footer -->
     <footer>
@@ -108,8 +81,6 @@ IndexAsset::register($this);
         </div>
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
-
-
 
 <?php $this->endBody() ?>
 </body>

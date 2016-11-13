@@ -2,7 +2,12 @@ html,
 body {
     height: 100%;
 }
-
+body {
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 0.1vw;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
 .wrap {
     min-height: 100%;
     height: auto;
@@ -162,10 +167,12 @@ a.desc:after {
       }
       .in-center{
          
-          border: 2px solid #C74C27;
-          
+          border-top-left-radius: 3%;
+          border-top-right-radius: 3%;
+          background-color: rgba(255,255,255,.8) !important;
           margin: auto; 
-          max-width: 600px;
+          max-width: 700px;
+          margin-bottom: 10%;
       }
       .form-control{
           border-color: #000;
@@ -175,7 +182,9 @@ a.desc:after {
          
           background-color: #C74C27;
           color: #fff;
-          padding: 2%;
+          padding: 4%;
+          border-top-left-radius: 3%;
+          border-top-right-radius: 3%;
       }
       .head-contact h1{
         
