@@ -21,6 +21,7 @@ class IndexAsset extends AssetBundle
         'css/menu.css',
         '//fonts.googleapis.com/css?family=PT+Sans',
         
+        
     ];
     public $js = [
         'index/js/parallax-scroll.js',
