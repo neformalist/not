@@ -11,7 +11,7 @@ use yii\captcha\Captcha;
 use kartik\file\FileInput;
 
 
-$this->title = 'Contact';
+$this->title = Yii::t('contact', 'contact');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="head-contact">
         <h1><?= Html::encode($this->title) ?></h1>
         <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+           <?=Yii::t('contact', 'contact_capition');?> 
         </p>
     </div>
     
@@ -76,7 +76,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ])*/ ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-orange btn-large', 'name' => 'contact-button']) ?>
+                    <?= Html::submitButton(Yii::t('contact', 'submit'), ['class' => 'btn btn-orange btn-large', 'name' => 'contact-button']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>

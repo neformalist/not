@@ -4,7 +4,7 @@ return [
     'home'=>'Home',
     'examples'=>'Examples',
     'articles'=>'Articles',
-    'preis'=>'Preis',
+    'preis'=>'Price',
     'contact'=>'Contact',
     'language'=>"Language"
 ];

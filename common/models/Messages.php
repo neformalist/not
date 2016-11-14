@@ -50,12 +50,12 @@ class Messages extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'first_name' => 'First Name',
-            'last_name' => 'Last Name',
+            'first_name' => Yii::t('contact', 'first_name'),
+            'last_name' => Yii::t('contact', 'last_name'),
             'email' => 'Email',
-            'phone' => 'Phone',
-            'text' => 'Text',
-            'file' => 'File',
+            'phone' => Yii::t('contact', 'phone'),
+            'text' => Yii::t('contact', 'text'),
+            'file' => Yii::t('contact', 'file'),
             'created_at' => 'Created At',
             'new' => 'New',
         ];

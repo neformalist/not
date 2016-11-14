@@ -140,17 +140,15 @@ a.desc:after {
         margin: 0;
         padding: 0;
         left: 15px;
-        top: 27px;
+        top: 25px;
         position: absolute;
-        font-size: 14px;
         color: #ccc;
         font-weight: normal;
         transition: all .3s ease;
      } 
-    .active  {
-          top: 0;
-          left: 0;
-          font-size: 12px;
+    .custom-input .active  {
+          top: -5px;
+          left: 0;  
     }  
       
     .focusIn {
@@ -182,7 +180,7 @@ a.desc:after {
          
           background-color: #C74C27;
           color: #fff;
-          padding: 4%;
+          padding: 5%;
           border-top-left-radius: 3%;
           border-top-right-radius: 3%;
       }
