@@ -19,7 +19,7 @@ class IndexAsset extends AssetBundle
         'index/css/scroll.css',
         'index/css/lightslider.min.css',
         'css/menu.css',
-        '//fonts.googleapis.com/css?family=PT+Sans',
+        '//fonts.googleapis.com/css?family=Andika',
         
         
     ];
