@@ -10,6 +10,13 @@
         color: #C74C27;
     }
     
+    h1{
+        color:#555;
+        font-size: 3rem;
+        margin: 2% 0 4% 2%;
+        border-bottom: 2px solid #999;
+        padding-bottom: 2%;
+    } 
     
 .price{
     text-align: center;
@@ -90,4 +97,27 @@
 
 .price-extra{
     padding-bottom: 1%;
+}
+
+.rowspan{
+    
+   position: relative;
+}
+
+.rowspan span{
+    /* -moz-transform: rotate(300deg); 
+    -ms-transform: rotate(300deg); 
+    -webkit-transform: rotate(300deg); 
+    -o-transform: rotate(300deg);*/
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 50%;
+    display: block;
+    transform: rotate(270deg);
+    width: 10px;
+    position: absolute;
+    bottom: 2%;
+    font-weight: bold;
+    color:#999;
+    letter-spacing: 5px;
 }

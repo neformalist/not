@@ -1,5 +1,9 @@
 <?php
 
+
+use yii\helpers\Url;
+
+
 $this->title = 'Preis';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -9,6 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <div class="container">
+    <h1>Стоимость услуг по набору нот, корректуре нотного текста</h1>
     <div class="row block-price">
         <div class="col-md-4 price">
             <div class="header-pricing bg-pricing-orange">
@@ -29,11 +34,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <h4>Однострочная нотная партия</h4>
                     <table class="table">
                       <tr>
+                        <td class="rowspan" rowspan=3><span>Сложность</span></td>   
                         <td class="details">
                             <p class="plan-title">легкая</p>  
                         </td>
                         <td>
-                            <p>70 руб/стр</p>
+                            <p>70 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -41,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">средняя</p>  
                         </td>
                         <td>
-                            <p>100 руб/стр</p>
+                            <p>100 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -49,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">трудная</p>  
                         </td>
                         <td>
-                            <p>130 руб/стр</p>
+                            <p>130 руб /стр</p>
                         </td>
                       </tr>
                     </table>
@@ -59,11 +65,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <h4>Однострочная вокальная партия</h4>
                     <table class="table">
                       <tr>
+                        <td class="rowspan" rowspan=3><span>Сложность</span></td>  
                         <td class="details">
                             <p class="plan-title">легкая</p>  
                         </td>
                         <td>
-                            <p>85 руб/стр</p>
+                            <p>85 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -71,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">средняя</p>  
                         </td>
                         <td>
-                            <p>115 руб/стр</p>
+                            <p>115 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -79,7 +86,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">трудная</p>  
                         </td>
                         <td>
-                            <p>145 руб/стр</p>
+                            <p>145 руб /стр</p>
                         </td>
                       </tr>
                     </table>
@@ -110,11 +117,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <h4>Фортепиано, клавир</h4>
                     <table class="table">
                       <tr>
+                        <td class="rowspan" rowspan=3><span>Сложность</span></td>   
                         <td class="details">
                             <p class="plan-title">легкая</p>  
                         </td>
                         <td>
-                            <p>100 руб/стр</p>
+                            <p>100 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -122,7 +130,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">средняя</p>  
                         </td>
                         <td>
-                            <p>130 руб/стр</p>
+                            <p>130 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -130,7 +138,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">трудная</p>  
                         </td>
                         <td>
-                            <p>160 руб/стр</p>
+                            <p>160 руб /стр</p>
                         </td>
                       </tr>
                     </table>
@@ -140,11 +148,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <h4>Камерные ансамбли и хоровые партитуры</h4>
                     <table class="table">
                       <tr>
+                        <td class="rowspan" rowspan=3><span>Сложность</span></td>   
                         <td class="details">
                             <p class="plan-title">легкая</p>  
                         </td>
                         <td>
-                            <p>120 руб/стр</p>
+                            <p>120 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -152,7 +161,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">средняя</p>  
                         </td>
                         <td>
-                            <p>150 руб/стр</p>
+                            <p>150 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -160,7 +169,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">трудная</p>  
                         </td>
                         <td>
-                            <p>180 руб/стр</p>
+                            <p>180 руб /стр</p>
                         </td>
                       </tr>
                     </table>
@@ -191,11 +200,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <h4>Камерный оркестр</h4>
                     <table class="table">
                       <tr>
+                        <td class="rowspan" rowspan=3><span>Сложность</span></td>   
                         <td class="details">
                             <p class="plan-title">легкая</p>  
                         </td>
                         <td>
-                            <p>150 руб/стр</p>
+                            <p>150 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -203,7 +213,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">средняя</p>  
                         </td>
                         <td>
-                            <p>180 руб/стр</p>
+                            <p>180 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -211,7 +221,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">трудная</p>  
                         </td>
                         <td>
-                            <p>200 руб/стр</p>
+                            <p>200 руб /стр</p>
                         </td>
                       </tr>
                     </table>
@@ -221,11 +231,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <h4>Для большого симфонического оркестра</h4>
                     <table class="table">
                       <tr>
+                        <td class="rowspan" rowspan=3><span>Сложность</span></td>   
                         <td class="details">
                             <p class="plan-title">легкая</p>  
                         </td>
                         <td>
-                            <p>200 руб/стр</p>
+                            <p>200 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -233,7 +244,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">средняя</p>  
                         </td>
                         <td>
-                            <p>230 руб/стр</p>
+                            <p>230 руб /стр</p>
                         </td>
                       </tr>
                       <tr>
@@ -241,7 +252,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="plan-title">трудная</p>  
                         </td>
                         <td>
-                            <p>250 руб/стр</p>
+                            <p>250 руб /стр</p>
                         </td>
                       </tr>
                     </table>
@@ -287,49 +298,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
     </div>
+    
+    <p>По остальным вопросам свяжить с нами с помощью <a href="<?=  Url::to(['/site/contact'])?>">контактной формы</a> или использую информацию ниже</p>
+    
 </div>
-
-
-<!--<div class="container">
-	<section class="blue-section">
-		<h1>This is a big title, it can go on multiple lines. See for yourself.</h1>
-	</section>
-        <div class="table-responsive">
-            <table class="table">
-              <tr>
-                  <td class="price">
-                      <div class="stacked-icons">
-                      <span class="fa-stack fa-3x">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <strong class="fa-stack-1x ">70<i class="fa fa-rub" aria-hidden="true"></i></strong>
-                      </span>
-                      </div>
-                  </td>
-                <td class="details">
-                    <h4 class="plan-title">Free</h4>
-                    <p class="plan-description">Однострочная инструментальная партия (соло)</p>
-                </td>
-                <td></td>
-              </tr>
-              
-                <tr>
-                <td class="price">
-                      <div class="stacked-icons">
-                      <span class="fa-stack fa-3x">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <strong class="fa-stack-1x ">70<i class="fa fa-rub" aria-hidden="true"></i></strong>
-                      </span>
-                      </div>
-                  </td>
-                <td class="details">
-                    <h4 class="plan-title">Free</h4>
-                    <p class="plan-description">Однострочная инструментальная партия (соло)</p>
-                </td>
-                <td></td>
-              </tr>
-            </table>
-        </div>
-	
-	
-	<p>And some paragraphs.</p>
-</div>-->

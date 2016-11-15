@@ -23,7 +23,7 @@ use yii\helpers\Url;
                     <a href="<?= Url::to(['/site/contact'])?>"><?=Yii::t('main', 'contact')?><i class="fa fa-envelope" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="<?= Url::to(['/site/preis'])?>"><?=Yii::t('main', 'preis')?><i class="fa fa-credit-card" aria-hidden="true"></i></a>
+                    <a href="<?= Url::to(['/site/price'])?>"><?=Yii::t('main', 'preis')?><i class="fa fa-credit-card" aria-hidden="true"></i></a>
                 </li>
                  <li>
                     <?=\frontend\widgets\LangWidget::widget()?>

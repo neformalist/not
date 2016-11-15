@@ -136,9 +136,22 @@ $this->title = 'My Yii Application';
             
             <div class="overflow-scroll scrollflow -slide-top" data-scrollflow-start="0" data-scrollflow-distance="100" data-scrollflow-amount="200"></div>
             <div class="overflow-bg"></div>
-            <h2 class="scrollflow -slide-bottom -opacity" data-scrollflow-start="0" data-scrollflow-distance="50" data-scrollflow-amount="100" >Vertically Centered Text</h2>
+            <h2 class="scrollflow -slide-bottom -opacity" data-scrollflow-start="0" data-scrollflow-distance="50" data-scrollflow-amount="100" >Команда профессиональных нотных наборщиков и редакторов</h2>
         </div>
     </aside>
+     
+     <section>
+        <div class="container">
+               <div class="row">
+                   <div class="col-lg-12 text-right main-capition-text">
+                       <p> Мы осуществляем полный спектр нотоиздательского процесса.</p>
+                       <p>Если Вам нужны нотные примеры в сборник или книгу, подготовить оркестровые голоса для оркестра или ансамбля,
+                       транспонировать вокальные или инструментальные произведения в другую тональность</p>
+                        <p>Обращайтесь к нам! Наша команда выполнит работу БЫСТРО, КАЧЕСТВЕННО и ПО ПРИЕМЛЕМОЙ ЦЕНЕ</p>
+                   </div>
+               </div>
+           </div>    
+     </section>
     
      <section id="portfolio" class="portfolio">
         <div class="container">
@@ -179,9 +192,9 @@ $this->title = 'My Yii Application';
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                    <h3>При заказе на сумму от 15000 рублей — СКИДКА 20% </h3>
+                    <?=Html::a('Наши цены', Url::to(['/site/price']), ['class' => 'btn btn-lg btn-dark'])?>  
+                    
                 </div>
             </div>
         </div>
@@ -248,37 +261,37 @@ $this->title = 'My Yii Application';
                       </div> 
                     <ul id="lightSlider" class="cs-hidden">
                          <li>
-                             <?=Html::img('@web/img/icons/finale-icons.png', ['height' => '150'])?>
+                             <?=Html::img('@web/img/icons/finale-icons.png', ['height' => '150', 'alt' => 'Finale 2014'])?>
                              <h3>Finale 2014</h3>
                              
                          </li>
                          <li>
-                            <?=Html::img('@web/img/icons/sibicon.png', ['height' => '150'])?>
+                            <?=Html::img('@web/img/icons/sibicon.png', ['height' => '150', 'alt' => 'Sibelius 8'])?>
                              <h3>Sibelius 8</h3>
                              
                          </li>
                          <li>
-                             <?=Html::img('@web/img/icons/musescore-icon-round-2048.png', ['height' => '150'])?>
+                             <?=Html::img('@web/img/icons/musescore-icon-round-2048.png', ['height' => '150', 'alt' => 'MuseScore 2'])?>
                              <h3>MuseScore 2</h3>
                              
                          </li>
                          <li>
-                            <?=Html::img('@web/img/icons/photoshop.png', ['height' => '150'])?>
+                            <?=Html::img('@web/img/icons/photoshop.png', ['height' => '150', 'alt' => 'Adobe PhotoShop'])?>
                              <h3>Adobe PhotoShop</h3>
                              
                          </li>
                          <li>
-                             <?=Html::img('@web/img/icons/Adobe_InDesign_icon.png', ['height' => '150'])?>
+                             <?=Html::img('@web/img/icons/Adobe_InDesign_icon.png', ['height' => '150', 'alt' => 'Adobe InDesign'])?>
                              <h3>Adobe InDesign</h3>
                              
                          </li>
                          <li>
-                             <?=Html::img('@web/img/icons/illustrator.png', ['height' => '150'])?>
+                             <?=Html::img('@web/img/icons/illustrator.png', ['height' => '150', 'alt' => 'Adobe Illustrator'])?>
                              <h3>Adobe Illustrator</h3>
                              
                          </li>
                          <li>
-                             <?=Html::img('@web/img/icons/pdf-icon.png', ['height' => '150'])?>
+                             <?=Html::img('@web/img/icons/pdf-icon.png', ['height' => '150', 'alt' => 'Adobe PDF'])?>
                              <h3>Adobe PDF</h3>
                             
                          </li>

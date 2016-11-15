@@ -154,7 +154,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionPreis()
+    public function actionPrice()
     {
         $this->view->registerCssFile('/css/preis.css', ['depends' =>'frontend\assets\AppAsset']);
         return $this->render('preis');

@@ -115,7 +115,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', e
 -moz-box-shadow: inset 0px -2px 0 #FAFA8F;
     -webkit-box-shadow: inset 0px -2px 0 #FAFA8F;
     -o-box-shadow: inset 0px -2px 0 #FAFA8F;
-    box-shadow: inset 0px -1px 2px #FAFA8F;
+    box-shadow: inset 0px -1px 100px #fff;
 
 min-height: 100vh;
 text-align: center;
@@ -248,24 +248,43 @@ width: 100%;
 }
 
 .text-vertical-callout h2{
-   font-size: 6rem;
+   font-size: 5rem;
    position: absolute;
    top:35%;
    display: block;
    width: 100%;
+   padding: 0 5%;
    margin: auto;
    color: #C74C27;
    font-weight: 600;
+   
 }
-
+@media(max-width:768px){
+    .text-vertical-callout h2{
+        font-size: 3rem;
+    }
+}
 .overflow-bg{
-   background-color:  rgba(255,255,250, .5);
+   background-color:  rgba(255,255,250, .85);
    position: absolute;
    height: 100%;
    top:0;
    width: 100%;
 }
+
+
+
+.main-capition-text {
+    padding: 10% 5% 10% 20%;
+    color: #555;
+   font-weight: 600;
+   font-size: 2.5rem;
+}
+
 /* Portfolio */
+
+
+
 
 .portfolio {
     padding: 50px 0;
