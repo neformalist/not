@@ -12,6 +12,7 @@ use backend\controllers\TextSearch;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
 use yii\db\ActiveRecord;
+use yii\filters\AccessControl;
 
 
 /**
@@ -25,6 +26,20 @@ class ArticleController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['login', 'error'],
+                        'allow' => true,
+                    ],
+                    [
+                        'actions' => ['logout', 'index', 'create', 'update', 'delete', 'view'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [

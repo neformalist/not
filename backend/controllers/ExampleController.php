@@ -11,7 +11,7 @@ use yii\filters\VerbFilter;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
 use yii\db\ActiveRecord;
-
+use yii\filters\AccessControl;
 /**
  * ExampleController implements the CRUD actions for Example model.
  */
@@ -23,6 +23,21 @@ class ExampleController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['login', 'error'],
+                        'allow' => true,
+                    ],
+                    [
+                        'actions' => ['logout', 'index', 'create', 'update', 'delete', 'view'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+            
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [

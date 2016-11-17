@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             [
                 'attribute' => 'category_id',
                 'filter' => common\models\Category::find()->select(['name', 'id'])->indexBy('id')->column(),
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                  'filter' => [0 => "No", 1 => 'Yes'],
                  'format' => 'boolean'
              ],
-             'description_ru:ntext',
+             //'description_ru:ntext',
              'author',
              'hits',
              'url:url',

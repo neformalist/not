@@ -26,7 +26,8 @@
         "zabachok/yii2-sluggable-behavior": "*",
         "kartik-v/yii2-widget-fileinput": "@dev",
         "mihaildev/yii2-elfinder": "*",
-        "yeesoft/yii2-lightbox": "*"
+        "yeesoft/yii2-lightbox": "*",
+        "dmstr/yii2-adminlte-asset": "2.*"
        
         
         

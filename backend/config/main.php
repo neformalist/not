@@ -13,6 +13,13 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
+        'view' => [
+         'theme' => [
+             'pathMap' => [
+                '@app/views' => '@backend/theme',
+                ],
+            ],
+        ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
@@ -45,6 +52,20 @@ return [
             'rules' => [
             ],
         ],
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@frontend/messages',
+                    'sourceLanguage' => 'ru',
+                    'fileMap' => [
+                        'main' => 'main.php',
+                        'landing' => 'landing.php',
+                        'service' => 'service.php',
+                    ],
+                ],
+            ],
+        ],
         
     ],
     'controllerMap' => [
@@ -71,5 +92,6 @@ return [
             ]
         ]
     ],
+    
     'params' => $params,
 ];
