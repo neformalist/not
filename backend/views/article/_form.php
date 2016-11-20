@@ -76,7 +76,10 @@ use backend\models\MyInputFile;
 
     <?= $form->field($model, 'hits')->textInput() ?>
 
-    <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'url', [
+        'template'=>' <div class="input-group"><span class="input-group-addon">
+        <span>'.Yii::$app->urlFrontendManager->baseUrl .'/articles/</span></span>{input}{error}</div>'
+        ])->textInput(['maxlength' => true]) ?>
     
     <?=Html::img($model->image,['width' => 500, 'id' => 'img']);?>
 

@@ -8,4 +8,5 @@ return [
     'text'=>'Текст',
     'file'=>'Файл',
     'submit'=>'Отправить',
+    'extensions' => 'Поддерживаемые форматы файлов — .pdf, .jpg, .jpeg, .png, .tiff, .doc, .txt',
 ];

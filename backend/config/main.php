@@ -52,6 +52,15 @@ return [
             'rules' => [
             ],
         ],
+        'urlFrontendManager' =>[
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'baseUrl' => 'http://not',
+            'suffix' => '.html',
+            'class'=>'yii\web\UrlManager',
+            'rules' => require (Yii::getAlias('@common'). '/routes.php')
+        ],
+        
         'i18n' => [
             'translations' => [
                 '*' => [

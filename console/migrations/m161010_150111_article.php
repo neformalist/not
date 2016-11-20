@@ -15,7 +15,7 @@ class m161010_150111_article extends Migration
             'visible' => $this->smallInteger(1)->defaultValue(0),
             'description' => $this->text(500),
             'author' => $this->string(),
-            'hits'=> $this->integer(),
+            'hits'=> $this->integer()->defaultValue(0),
             'url' => $this->string()->notNull(),
             'image'=> $this->string()
         ]);

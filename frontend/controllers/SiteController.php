@@ -130,11 +130,11 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             
             $file = UploadedFile::getInstance($model, 'file');
-            $model->file = $file->name;
-            $path = Yii::getAlias('@app') .'/user_files/'. $file->name;
+            if($file) $model->file = $file->name;
+            $path = Yii::getAlias('@common') .'/upload/user_files/'. $file->name;
             
             if ($model->save()) {
-                $file->saveAs($path);
+                if($file) $file->saveAs($path);
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
             } else {
                 Yii::$app->session->setFlash('error', 'There was an error sending email.');

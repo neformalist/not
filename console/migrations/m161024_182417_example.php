@@ -16,7 +16,7 @@ class m161024_182417_example extends Migration
             'visible' => $this->smallInteger(1)->defaultValue(0),
             'description_ru'=>$this->text(),
             'description_en'=>$this->text(),
-            'hits'=> $this->integer(),
+            'hits'=> $this->integer()->defaultValue(0),
             'url' => $this->string()->notNull(),
             
         ]);

@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yii\grid\GridView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Article */
@@ -46,7 +47,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'description_en:ntext',
             'author',
             'hits',
-            'url:url',
+            [
+             'label' => 'URL',
+             'format' => 'url',  
+             'value' => Yii::$app->urlFrontendManager->createAbsoluteUrl(['/articles/' . $model->url]),  
+            ],
             [
             'label' => 'Image',
             'format' => 'raw',

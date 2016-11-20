@@ -34,6 +34,7 @@ class Article extends \yii\db\ActiveRecord
                 'class' => SluggableBehavior::className(),
                 'attribute' => 'title_ru',
                 'slugAttribute' => 'url',
+                'immutable' => true,
                 ]
             ];
     }
@@ -51,6 +52,7 @@ class Article extends \yii\db\ActiveRecord
         return [
             [['category_id', 'visible', 'hits'], 'integer'],
             [['updated_at', 'created_at'], 'safe'],
+            [['url'], 'string'],
             [['description_en', 'description_ru'], 'string'],
             [['title_ru'], 'required'],
             [['title_en'], 'string'],

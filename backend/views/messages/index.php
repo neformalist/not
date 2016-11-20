@@ -21,17 +21,28 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'rowOptions'=>function ($model, $key, $index, $grid){
+                            $class= ($model->new)? 'success':'';
+                            return [
+                                'key'=>$key,
+                                'index'=>$index,
+                                'class'=>$class
+                            ];
+                        },
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
             'first_name',
             'last_name',
             'email:email',
             'phone',
-            // 'text:ntext',
+            [
+                'attribute' =>'text',
+                'value' => function ($data){
+                             return \yii\helpers\BaseStringHelper::truncate($data->text, 50);
+                           }
+                ],
             // 'file',
-            // 'created_at',
+            'created_at',
             // 'new',
 
             ['class' => 'yii\grid\ActionColumn'],

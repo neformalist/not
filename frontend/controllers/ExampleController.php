@@ -16,6 +16,8 @@ class ExampleController extends \yii\web\Controller
         
         $this->registerTag($example->getMetaExamples()->all());
         
+        $example->updateCounters(['hits' => 1]);
+        
         return $this->render('view',[
             'example' => $example,
             'lang' => $lang,

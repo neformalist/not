@@ -30,6 +30,8 @@ class ArticlesController extends \yii\web\Controller
         ->limit($pages->limit)
         ->all();
         
+        $post->updateCounters(['hits' => 1]);
+        
            return $this->render('view',[
                'post' => $post,
                'texts' => $texts,

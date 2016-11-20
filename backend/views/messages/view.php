@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Messages */
@@ -24,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-
+    
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -34,7 +35,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'email:email',
             'phone',
             'text:ntext',
-            'file',
+            [
+                'label' => 'file',
+                'format' => 'html',
+                'value' => Html::a($model->file, Url::to(['/messages/download', 'file' => Html::encode($model->file) ])) ,
+                    
+            ],
             'created_at',
             'new',
         ],

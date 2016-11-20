@@ -1,10 +1,12 @@
 <?php
 use yii\helpers\Html;
 
+use common\models\Messages;
+
 /* @var $this \yii\web\View */
 /* @var $content string */
 ?>
-
+<?php $messages = Messages::find()->where(['new' => 1])->count(); ?>
 <header class="main-header">
 
     <?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
@@ -23,10 +25,10 @@ use yii\helpers\Html;
                 <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-envelope-o"></i>
-                        <span class="label label-success">4</span>
+                        <span class="label label-success"><?=$messages;?></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">You have 4 messages</li>
+                        <li class="header">You have <?=$messages;?> messages</li>
                         <li>
                             <!-- inner menu: contains the actual data -->
                             <ul class="menu">

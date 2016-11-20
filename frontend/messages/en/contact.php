@@ -8,4 +8,5 @@ return [
     'text'=>'text',
     'file'=>'File',
     'submit'=>'Submit',
+    'extensions' => 'Allowed File Extensions is .pdf, .jpg, .jpeg, .png, .tiff, .doc, .txt',
 ];

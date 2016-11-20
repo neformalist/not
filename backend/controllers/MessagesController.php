@@ -9,7 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-
+use yii\web\HttpException;
 /**
  * MessagesController implements the CRUD actions for Messages model.
  */
@@ -29,7 +29,7 @@ class MessagesController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'create', 'update', 'delete', 'view'],
+                        'actions' => ['logout', 'index', 'create', 'update', 'delete', 'view', 'download'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -66,9 +66,35 @@ class MessagesController extends Controller
      */
     public function actionView($id)
     {
+        $model  = $this->findModel($id);
+        $model->updateAttributes(['new' => 0]);
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
         ]);
+    }
+    
+    
+    public function actionDownload($file) {
+        
+        $file_path = Yii::getAlias('@common') . '/upload/user_files/'.$file;
+        
+        if(!file_exists($file_path)){
+           throw new HttpException(404 ,'Not found '.$file_path); 
+        }
+        
+
+        $size = filesize($file_path);
+        
+        header('Content-Type: application/force-download');
+        header("Content-Disposition: attachment; filename=$file");
+        header("Content-Transfer-Encoding: binary");
+        header("Content-Length: " . $size);
+       
+        readfile($file_path);
+      
+        return true;
+      
+        
     }
 
     /**

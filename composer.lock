@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "03cad10517d1959129e3e456c607f2c4",
     "content-hash": "7c7b8c40f2359bcc33efd8f022f38d73",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/2amigos/yii2-ckeditor-widget.git",
-                "reference": "a842bbf4c5b3adc48d4cd58aa294d593dd005c24"
+                "reference": "7092d708661b67965a9facce9e9f5e25ff39cac2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/2amigos/yii2-ckeditor-widget/zipball/a842bbf4c5b3adc48d4cd58aa294d593dd005c24",
-                "reference": "a842bbf4c5b3adc48d4cd58aa294d593dd005c24",
+                "url": "https://api.github.com/repos/2amigos/yii2-ckeditor-widget/zipball/7092d708661b67965a9facce9e9f5e25ff39cac2",
+                "reference": "7092d708661b67965a9facce9e9f5e25ff39cac2",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +65,7 @@
                 "yii 2",
                 "yii2"
             ],
-            "time": "2016-09-21 09:50:22"
+            "time": "2016-11-10 11:32:46"
         },
         {
             "name": "2amigos/yii2-date-time-picker-widget",
@@ -565,16 +566,16 @@
         },
         {
             "name": "ckeditor/ckeditor",
-            "version": "4.5.11",
+            "version": "4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ckeditor/ckeditor-releases.git",
-                "reference": "48155a1e1c7e84736b5a166ad3f33acea2a51255"
+                "reference": "2530c9c5d26f275882da192ba2231ac69e967474"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ckeditor/ckeditor-releases/zipball/48155a1e1c7e84736b5a166ad3f33acea2a51255",
-                "reference": "48155a1e1c7e84736b5a166ad3f33acea2a51255",
+                "url": "https://api.github.com/repos/ckeditor/ckeditor-releases/zipball/2530c9c5d26f275882da192ba2231ac69e967474",
+                "reference": "2530c9c5d26f275882da192ba2231ac69e967474",
                 "shasum": ""
             },
             "type": "library",
@@ -602,7 +603,7 @@
                 "text",
                 "wysiwyg"
             ],
-            "time": "2016-09-07 13:32:39"
+            "time": "2016-11-16 15:14:40"
         },
         {
             "name": "dmstr/yii2-adminlte-asset",

@@ -62,15 +62,15 @@ $this->params['breadcrumbs'][] = $this->title;
             
                 <?= $form->field($model, 'file')->widget(FileInput::className(),[
                     'pluginOptions' => [
-                        
                         'showUpload' => false,
                         'browseLabel' => '',
                         'removeLabel' => '',
                         'browseClass' => 'btn btn-orange',
                         'mainClass' => 'input-group-md',
+                        'allowedFileExtensions' => ['pdf', 'jpg', 'jpeg', 'png' , 'tiff', 'doc', 'txt'],
                        ] 
                 ])?>
-
+                <small><?=Yii::t('contact', 'extensions')?></small>
                 <?php /*$form->field($model, 'verifyCode')->widget(Captcha::className(), [
                     'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
                 ])*/ ?>
