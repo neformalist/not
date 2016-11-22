@@ -33,13 +33,13 @@ class Messages extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['first_name', 'email'], 'required'],
+            [['first_name', 'email', 'text'], 'required'],
             [['email'], 'email'],
             [['text'], 'string', 'max' => 900],
             [['created_at'], 'safe'],
             [['new'], 'integer'],
             [['first_name', 'last_name', 'email','phone', 'file'], 'string', 'max' => 100, 'min' => 2],
-            
+            [['file'], 'file', 'extensions' => 'pdf, jpg, jpeg, png, tiff, doc, txt'],
         ];
     }
 
